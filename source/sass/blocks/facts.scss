@@ -1,0 +1,100 @@
+.facts {
+  max-width: 119rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(300px, min-content) minmax(300px, min-content);
+  margin-top: 5.5rem;
+  grid-gap: 3.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  @media (max-width: $tablet-width) {
+    max-width: 74rem;
+    grid-template-rows: minmax(305px, 1fr) minmax(235px, min-content);
+    grid-row-gap: 3rem;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 31rem 31rem 23rem 25rem;
+    margin-top: 0;
+    grid-gap: 2rem;
+  }
+}
+
+.facts__item {
+  border-left: 3px solid $primary;
+  padding-left: 3.5rem;
+  padding-top: 3.7rem;
+  padding-bottom: 4rem;
+  padding-right: 4rem;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 1.7rem;
+    padding-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2rem;
+    padding-bottom: 0;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $primary;
+  }
+}
+
+.facts__item svg {
+  fill: $primary;
+}
+
+.facts__item:hover svg {
+  fill: white;
+}
+
+.facts__item:hover h2,
+.facts__item:focus h2 {
+  color: white;
+}
+
+.facts__item:hover p,
+.facts__item:focus p {
+  color: white;
+}
+
+.facts__item h2 {
+  font-size: 24px;
+  line-height: 34px;
+  color: $primary;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.facts__item p {
+  font-size: 16px;
+  line-height: 22px;
+  color: $black;
+  font-family: "PT Mono", "Arial", monospace;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0.7rem;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 1.5rem;
+  }
+}

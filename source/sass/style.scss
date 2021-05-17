@@ -1,0 +1,163 @@
+@import "vars";
+@import "blocks/nav.scss";
+@import "blocks/intro.scss";
+@import "blocks/facts.scss";
+@import "blocks/about.scss";
+@import "blocks/services.scss";
+@import "blocks/feedback.scss";
+@import "blocks/footer.scss";
+@import "blocks/modal.scss";
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 1.6rem;
+  min-width: 320px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.main__image a {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: "PT Mono", "Arial", monospace;
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 0.5;
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom: 13rem;
+    left: 21rem;
+    z-index: 5;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* cormorant-garamond-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* cormorant-garamond-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/cormorant-garamond-v10-latin_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/cormorant-garamond-v10-latin_cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* cormorant-garamond-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/cormorant-garamond-v10-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/cormorant-garamond-v10-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-300 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url('../fonts/poppins-v15-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/poppins-v15-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/poppins-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/poppins-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-500 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/poppins-v15-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/poppins-v15-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-700 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/poppins-v15-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/poppins-v15-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  white-space: nowrap; /* added line */
+}
+
+.main__image {
+  background-image: url(".././img/intro.png");
+  background-repeat: no-repeat;
+  height: 880px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+//  background-color: #1b2d37;
+  background-size: 100% 100%;
+
+  @media (max-width: $tablet-width) {
+    height: 69rem;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 65rem;
+  }
+}

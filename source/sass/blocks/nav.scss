@@ -1,0 +1,383 @@
+
+
+.header__content {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  max-width: 1190px;
+  margin: 0 auto;
+  outline: 5px solid red;
+  grid-gap: 0;
+  padding-left: 1rem;
+}
+
+.header__left {
+  margin-top: 4.5rem;
+
+}
+
+.header__toggle {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    height: 0;
+    width: 0;
+//    background-color: $primary;
+    cursor: pointer;
+    border: none;
+    display: block;
+    outline: none;
+    z-index: 1;
+
+    &:hover,
+    &:focus {
+      background-color: darken($primary, 15%);
+    }
+
+    &:active {
+      background-color: lighten($primary, 15%);
+    }
+  }
+}
+
+.header__toggle::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 1px;
+  background-color: $text-black;
+  top: 2rem;
+  left: 1.5rem;
+  box-shadow: 0 5px 0 0 black, 0 10px 0 0 black;
+}
+
+.header__left input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-left: 1rem;
+  outline: 5px solid red;
+
+  &::placeholder {
+    color: #9b9997;
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 21px
+  }
+}
+
+.header__center  {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.header__right {
+
+  text-align: end;
+  margin-top: 4.5rem;
+}
+
+.header__right a {
+  font-family: "Poppins", "Arial", sans-serif;
+  color: $text-black;
+  font-size: 14px;
+  line-height: 21px;
+  margin-left: 3rem;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: darken($text-black, 15%);
+  }
+
+  &:active {
+    color: darken($text-black, 25%);
+  }
+}
+
+.header__right svg {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: inline-block;
+    text-align: end;
+  }
+}
+
+.nav {
+  outline: 5px solid red;
+  max-width: 50rem;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 3rem;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Poppins", "Arial", sans-serif;
+  padding-left: 1rem;
+  white-space: nowrap;
+}
+
+.nav a {
+    color: $text-black;
+}
+
+// burger
+
+.header--closed .header__content {
+
+  @media (max-width: $tablet-width) {
+    display: grid;
+  grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 5rem;
+  }
+}
+
+.header--closed .header__left {
+  @media (max-width: $tablet-width) {
+  display: none;
+  }
+}
+
+.header--closed .header__center {
+  @media (max-width: $tablet-width) {
+  text-align: end;
+  }
+
+}
+
+//.header--closed .header__right {
+//  grid-column: span 4;
+//}
+
+.header--opened .header__left {
+  @media (max-width: $tablet-width) {
+  display: block;
+  grid-column: span 2;
+//  grid-row: span 2;
+  }
+
+
+}
+
+
+
+.header--closed nav {
+  display: none;
+}
+
+
+
+
+.header--opened {
+  @media (max-width: $tablet-width) {
+    background-color: $primary;
+  height: 70rem;
+  }
+
+}
+
+.header--opened a {
+
+  @media (max-width: $tablet-width) {
+    color: white;
+  font-size: 24px;
+line-height: 36px;
+  }
+
+}
+
+.header--opened svg {
+  fill: white;
+}
+
+.header--opened nav {
+  display: grid;
+  grid-template-columns: 1fr;
+
+}
+
+//.header--closed .header__content {
+//  @media (max-width: $tablet-width) {
+//    display: none;
+//  }
+//
+//  @media (max-width: $mobile-width) {
+//    display: none;
+//  }
+//}
+
+//.header--opened .header__content {
+//  @media (max-width: $tablet-width) {
+//    min-width: 100%;
+//    position: fixed;
+////    height: 100%;
+//    background-color: $primary;
+//    z-index: 2;
+//    top: 0;
+//    right: 0;
+//    overflow-y: scroll;
+//  }
+//}
+//
+//.header--nojs .header__content {
+//  @media (max-width: $tablet-width) {
+//    min-width: 100%;
+//    position: static;
+//    height: 568px;
+//    background-color: $white;
+//    z-index: 2;
+//    top: 0;
+//    right: 0;
+//    padding-top: 10rem;
+//    padding-left: 0;
+//    padding-right: 0;
+//    overflow-y: scroll;
+//  }
+//}
+
+
+
+// старый код
+
+//.nav__content {
+//  display: grid;
+//}
+//
+//.nav__content--left {
+//  grid-template-columns: min-content 1fr;
+//  grid-column-gap: 1.5rem;
+//}
+//
+//.nav__content--left a {
+//  grid-row: span 5;
+//  margin-top: -0.5rem;
+//}
+//
+//.nav__content p {
+//  margin: 0;
+//
+//  @media (max-width: $mobile-width) {
+//    display: none;
+//  }
+//}
+//
+//.nav__content-mail,
+//.nav__content-phone {
+//  position: relative;
+//}
+//
+//.nav__content-mail a,
+//.nav__content-phone a {
+//  color: white;
+//  margin-left: 1rem;
+//  margin-top: 0;
+//  display: block;
+//
+//  &:hover,
+//  &:focus {
+//    color: $primary;
+//  }
+//
+//  &:active {
+//    color: darken($primary, 15%);
+//  }
+//}
+//
+//.nav__content-mail p,
+//.nav__content-phone p {
+//  font-family: "PT Mono", "Arial", monospace;
+//  display: inline-block;
+//  vertical-align: middle;
+//  margin-left: 1.2rem;
+//  margin-top: -1rem;
+//
+//  @media (max-width: $tablet-width) {
+//    display: none;
+//  }
+//}
+//
+//.nav__content--right {
+//  display: grid;
+//  grid-template-columns: minmax(145px, 1fr) minmax(225px, 1fr) min-content;
+//  align-items: center;
+//  justify-items: end;
+//  grid-gap: 5rem;
+//  margin-top: -2rem;
+//
+//  @media (max-width: $tablet-width) {
+//    grid-template-columns: 1fr min-content;
+//    grid-gap: 2.5rem;
+//  }
+//}
+//
+//.nav__content--left svg {
+//  width: 52px;
+//  height: 52px;
+//
+//  @media (max-width: $mobile-width) {
+//    width: 38px;
+//    height: 38px;
+//  }
+//}
+//
+//.nav__content--right svg {
+//  width: 18px;
+//  height: 18px;
+//
+//  @media (max-width: $tablet-width) {
+//    width: 24px;
+//    height: 24px;
+//  }
+//}
+
+//.nav__content-link {
+//  display: inline-block;
+//  padding-top: 1rem;
+//  padding-bottom: 1rem;
+//  width: 18rem;
+//  border: 1px solid white;
+//  background: transparent;
+//  border-radius: 5px;
+//  color: white;
+//  text-transform: uppercase;
+//  cursor: pointer;
+//  text-align: center;
+//  vertical-align: middle;
+//
+//  @media (max-width: $tablet-width) {
+//    display: none;
+//  }
+//
+//  &:hover,
+//  &:focus {
+//    background-color: $primary;
+//  }
+//
+//  &:active {
+//    background-color: darken($primary, 15%);
+//  }
+//}
+
+//.nav__content b {
+//  font-weight: bold;
+//  font-size: 25px;
+//  line-height: 29px;
+//  color: white;
+//
+//  @media (max-width: $mobile-width) {
+//    display: none;
+//  }
+//}
+//
+//.nav__content--left p {
+//  font-weight: 500;
+//  font-size: 12px;
+//  line-height: 14px;
+//  color: #788891;
+//}
