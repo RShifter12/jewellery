@@ -1,0 +1,177 @@
+.blog {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1190px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.blog a {
+  color: $text-black;
+
+
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  border-bottom: 1px solid $primary;
+
+
+
+}
+
+.blog__cards {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content;
+  grid-row-gap: 3rem;
+  grid-column-gap: 5%;
+
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);;
+  }
+
+}
+
+.blog__card {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: $card-bg;
+  position: relative;
+  padding: 0;
+  margin: 0;
+
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+
+  }
+}
+
+.blog__card:last-child {
+  grid-row: span 2;
+grid-row: 1 / 3;
+  grid-column: 2;
+
+  @media (max-width: $tablet-width) {
+    grid-row: span 1;
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+}
+
+.blog__card:nth-child(2n) .blog__desc {
+  @media (max-width: $mobile-width) {
+   order: 2;
+  }
+
+
+}
+
+.blog__wrapper {
+
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    height: 256px;
+  }
+}
+
+.blog__wrapper {
+
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    height: 256px;
+  }
+}
+
+
+.blog__card img {
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    height: 100%;
+      object-fit: cover;
+  }
+
+}
+//.blog__card img {
+//  width: 100%;
+//  height: 300px;
+//  object-fit: cover;
+//
+//  @media (max-width: $tablet-width) {
+//    width: 339px;
+//    height: 300px;
+//    object-fit: cover;
+//  }
+//
+//  @media (max-width: $mobile-width) {
+//    width: 290px;
+//    height: 256px;
+//  }
+//}
+
+.blog__card:last-child img {
+  width: 100%;
+  height: 630px;
+
+  @media (max-width: $tablet-width) {
+    width: 339px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+  }
+}
+
+.blog__card .blog__desc {
+  margin-left: 2rem;
+  width: 50%;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.blog__card:last-child .blog__desc {
+  @media (min-width: $desktop-width-only) {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 285px;
+  height: 46%;
+  background-color: $card-bg;
+  padding-top: 7rem;
+  }
+
+
+
+
+  @media (max-width: $tablet-width) {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    padding-top: 0;
+    width: 100%;
+
+
+  }
+
+}
+.blog__card a {
+  color: $text-black;
+  border-bottom: 1px solid $primary;
+}

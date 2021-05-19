@@ -1,10 +1,10 @@
 @import "vars";
 @import "blocks/nav.scss";
 @import "blocks/intro.scss";
-@import "blocks/facts.scss";
+@import "blocks/products.scss";
 @import "blocks/about.scss";
-@import "blocks/services.scss";
-@import "blocks/feedback.scss";
+@import "blocks/blog.scss";
+//@import "blocks/feedback.scss";
 @import "blocks/footer.scss";
 @import "blocks/modal.scss";
 
@@ -21,31 +21,17 @@ body {
   min-width: 320px;
   margin: 0 auto;
   height: 100%;
+
+
 }
 
-.main__image a {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-family: "PT Mono", "Arial", monospace;
-    font-size: 14px;
-    line-height: 16px;
-    opacity: 0.5;
-    transform: rotate(-90deg);
-    position: absolute;
-    bottom: 13rem;
-    left: 21rem;
-    z-index: 5;
-  }
-}
 
 .content {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+
+
 }
 
 main {
