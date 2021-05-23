@@ -2,6 +2,13 @@
    background-color: black;
   width: 100%;
 margin: 0 auto;
+  min-height: 340px;
+
+  @media (max-width: $tablet-width) {
+    min-height: 450px;
+  }
+
+
 
 }
 
@@ -9,16 +16,22 @@ margin: 0 auto;
   max-width: 1190px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.5fr 1.1fr 0.5fr;
+//  grid-template-columns: 43% 36% 16%;
+  grid-template-columns: 1.5fr 1fr 0.5fr;
 //  width: 100%;
-  grid-column-gap: 5%;
+//  grid-column-gap: 3%;
   padding-right: 1rem;
   padding-left: 1rem;
+  margin-top: 6rem;
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     max-width: 678px;
+
+        padding-right: 1rem;
+    padding-left: 0rem;
+    margin-top: 2rem;
   }
 
   @media (max-width: $mobile-width) {
@@ -26,13 +39,21 @@ margin: 0 auto;
 //    grid-template-rows: repeat(3, minmax(min-content, 1fr));
     grid-template-rows: min-content 1fr min-content;
 //    max-width: 290px;
+    max-width: 310px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+
   }
 }
 
 .footer__mailing {
+
+  max-width: 510px;
   @media (max-width: $tablet-width) {
     grid-column: span 2;
     grid-row: 1 / 3;
+    max-width: 560px;
   }
 
   @media (max-width: $mobile-width) {
@@ -43,24 +64,37 @@ margin: 0 auto;
 
 .footer__mailing form {
   color: white;
-  border-bottom: 1px solid #9B9997;;
+  border-bottom: 1px solid #9B9997;
+
 }
 
 .footer__mailing h2 {
   font-size: 34px;
   line-height: 44px;
   letter-spacing: 0.03em;
+  margin-bottom: 1rem;
+
+  @media (max-width: $mobile-width) {
+    max-width: 24rem;
+    margin-top: 5rem;
+  }
 
 }
 
 .footer__mailing p {
   font-family: "Poppins", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 16px;
+line-height: 130%;
   color: #9B9997;
+
+  @media (max-width: $mobile-width) {
+    max-width: 24rem;
+  }
 }
 
 .footer__mailing input {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
   outline: none;
   border: none;
   width: 77%;
@@ -70,11 +104,11 @@ margin: 0 auto;
   background-color: inherit;
 
   @media (max-width: $tablet-width) {
-    width: 84%;
+    width: 79%;
   }
 
   @media (max-width: $mobile-width) {
-    width: 63%;
+    width: 60%;
   }
 
   &::placeholder {
@@ -92,7 +126,13 @@ margin: 0 auto;
   color: white;
   cursor: pointer;
   background-color: inherit;
+  font-size: 16px;
+line-height: 130%;
 
+}
+
+.footer__mailing svg {
+  margin-left: 5px;
 }
 
 
@@ -107,19 +147,30 @@ margin: 0 auto;
 .footer__list ul {
   list-style: none;
   column-count: 2;
-  margin-top: 3rem;
-  column-gap: 10rem;
+  margin-top: 4rem;
+  column-gap: 7rem;
   font-family: "Poppins", "Arial", sans-serif;
+  padding-left: 7rem;
 
   @media (max-width: $tablet-width) {
     padding-left: 0;
+    column-gap: 9rem;
 
   }
 
   @media (max-width: $mobile-width) {
     column-count: 1;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+
   }
 
+}
+.footer__list--mobile {
+  @media (max-width: $mobile-width) {
+    margin-top: 4rem;
+
+  }
 }
 
 .footer__list li {
@@ -128,37 +179,46 @@ line-height: 21px;
   margin-bottom: 2rem;
   white-space: nowrap;
 
+
+
 }
 
 .footer__contacts {
   color: white;
 
-  @media (max-width: $mobile-width) {
 
-  }
 }
 
 .footer__contacts ul {
   list-style: none;
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   font-family: "Poppins", "Arial", sans-serif;
+  padding-left: 6rem;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 4.5rem;
+    padding-left: 4rem;
+  }
 
   @media (max-width: $mobile-width) {
     padding-left: 0;
     display: flex;
+    margin-top: 0;
 
   }
 }
 
 .footer__contacts svg {
   fill: white;
+  margin-right: 1rem;
+
 }
 
 .footer__contacts li {
-  margin-bottom: 2rem;
+  margin-bottom: 1.7rem;
 
   @media (max-width: $mobile-width) {
-    margin-right: 3rem;
+    margin-right: 2rem;
   }
 }
 

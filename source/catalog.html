@@ -7,20 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jewellery</title>
      <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff" as="font" crossorigin="">
-    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff" as="font" crossorigin="">
-    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff" as="font" crossorigin="">
-    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/poppins-v15-latin-300.woff" as="font" crossorigin="">
-    <link rel="preload" href="fonts/poppins-v15-latin-300.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff" as="font" crossorigin="">
-    <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/poppins-v15-latin-500.woff" as="font" crossorigin="">
-    <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/poppins-v15-latin-700.woff" as="font" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff" as="font" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff" as="font" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff" as="font" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-300.woff" as="font" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-300.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff" as="font" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff" as="font" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff" as="font" crossorigin>
 </head>
 <body>
   <div class="content">
@@ -66,14 +66,109 @@
       </div>
     </header>
     <main>
-      <section class="intro">
-        <h1>PERFECTION</h1>
-        <p>made to be yours</p>
+      <section class="intro intro--catalog">
+        <h1>ALL JEWELLERY</h1>
+        <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
       </section>
-      <section class="products">
-        <h2>New In</h2>
-        <a href="catalog.html">Shop Now</a>
-        <div class="slider">
+      <section class="products products--catalog">
+       <aside class="filter">
+       <form action="https://echo.htmlacademy.ru" method="get">
+       <div class="filter__content">
+         <div class="filter-item">
+           <button type="button" class="filter-item__trigger">
+             <h2>Product</h2>
+            </button>
+            <div class="filter-item__content">
+
+                  <label class="filter__label">
+                    <input class="filter__input" type="checkbox" name="Necklaces" checked>
+                  <span class="checkbox"></span>
+                  Necklaces
+                  </label>
+
+                  <label class="filter__label">
+                    <input class="filter__input" type="checkbox" name="Chokers"  checked>
+                    <span class="checkbox"></span>
+                    Chokers
+                  </label>
+
+                <label class="filter__label">
+                  <input class=" filter__input" type="checkbox" name="Rings">
+                  <span class="checkbox"></span>
+                  Rings
+                </label>
+
+                <label class="filter__label">
+                  <input class="filter__input" type="checkbox" name="Earrings" checked>
+                  <span class="checkbox"></span>
+                  Earrings
+                  </label>
+         </div>
+        </div>
+
+        <div class="filter-item">
+           <button type="button" class="filter-item__trigger">
+             <h2>Material</h2>
+            </button>
+            <div class="filter-item__content">
+              <ul>
+                <li>
+                  <label class="filter__label">
+                    <input class="filter__input" type="checkbox" name="Necklaces" checked>
+                  <span class="checkbox"></span>
+                  Gold
+                  </label>
+                </li>
+               <li>
+                  <label class="filter__label">
+                    <input class="filter__input" type="checkbox" name="Chokers"  checked>
+                    <span class="checkbox"></span>
+                    Silver
+                  </label>
+              </li>
+            </ul>
+         </div>
+        </div>
+
+         <div class="filter-item">
+           <button type="button" class="filter-item__trigger">
+             <h2>Collection</h2>
+            </button>
+            <div class="filter-item__content">
+              <ul>
+                <li>
+                  <label class="filter__label">
+                    <input class="filter__input" type="checkbox" name="Necklaces" checked>
+                  <span class="checkbox"></span>
+                  Pink Flamingo
+                  </label>
+                </li>
+               <li>
+                  <label class="filter__label">
+                    <input class="filter__input" type="checkbox" name="Chokers" checked>
+                    <span class="checkbox"></span>
+                    Dreams
+                  </label>
+              </li>
+            </ul>
+         </div>
+        </div>
+
+
+        <div class="filter-item">
+          <button type="button" class="filter-item__trigger">
+         <h2>Product</h2></button>
+         <div class="filter-item__content">
+          <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+         </div>
+        </div>
+       </div>
+        <button type="submit">Apply</button>
+        <button type="reset">Clear All</button>
+
+         </form>
+       </aside>
+        <div class="slider slider--catalog">
           <div class="slider__item">
             <div class="slider__wrapper">
               <picture>
@@ -206,158 +301,22 @@
             <h3>Necklace with amethyst</h3>
             <p>$ 145</p>
           </div>
+          <a href="">previous</a>
+        <ol>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ol>
+        <a href="">next</a>
         </div>
+
       </section>
-      <section class="blog">
-        <h2>Blog</h2>
-        <a href="">Read All</a>
-        <div class="blog__cards">
-          <div class="blog__card">
-            <div class="blog__wrapper">
-              <picture>
-                <source type="image/webp" srcset="img/sunday1x.webp 1x, img/sunday2x.webp 2x">
-                <!-- 1x:342 2x:684 -->
-                <img src="img/sunday1x.jpg" srcset="img/sunday2x.jpg 2x" width="285" height="300" alt="Sunday">
-              </picture>
-            </div>
-            <div class="blog__desc">
-              <p>September 30, 2019</p>
-              <h3>How to care for
- your jewellery</h3>
-              <a href="">Read Article</a>
-            </div>
-           </div>
-           <div class="blog__card">
-            <div class="blog__desc">
-              <p>September 23, 2019</p>
-              <h3>Power of
-crystals</h3>
-               <a href="">Read Article</a>
-            </div>
-            <div class="blog__wrapper">
-             <picture>
-               <source type="image/webp" srcset="img/crystals1x.webp 1x, img/crystals2x.webp 2x">
-               <!-- 1x:342 2x:684 -->
-               <img src="img/crystals1x.jpg" srcset="img/crystals2x.jpg 2x" width="285" height="300" alt="crystals">
-            </picture>
-             </div>
-           </div>
-           <div class="blog__card">
-            <div class="blog__wrapper">
-             <picture>
-               <source type="image/webp" srcset="img/trends1x.webp 1x, img/trends2x.webp 2x">
-               <!-- 1x:342 2x:684 -->
-               <img src="img/trends1x.jpg" srcset="img/trends2x.jpg 2x" width="570" height="630" alt="trends">
-            </picture>
-             </div>
-            <div class="blog__desc">
-              <p>September 16, 2019</p>
-              <h3>AW 19 trends</h3>
-               <a href="">Read Article</a>
-            </div>
-           </div>
-           </div>
-         </section>
 
-        <section class="faq">
-          <h2>Frequently asked questions</h2>
-          <div class="faq__wrapper">
-            <div class="accordion-item">
-              <button type="button" class="accordion-item__trigger">
-              <h3>What materials are the jewellery made of?</h3>
-              </button>
-              <div class="accordion-item__content">
-                <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <button type="button" class="accordion-item__trigger">
-              <h3>Which countries do you deliver to?</h3>
-              </button>
-              <div class="accordion-item__content">
-                <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <button type="button" class="accordion-item__trigger">
-              <h3>What are the payment methods?</h3>
-              </button>
-              <div class="accordion-item__content">
-                <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <button type="button" class="accordion-item__trigger">
-              <h3>Can I return the jewellery if it didn’t fit me?</h3>
-              </button>
-              <div class="accordion-item__content">
-                <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-              </div>
-            </div>
-          </div>
-         </section>
-
-
-       <section class="contacts">
-         <h2><span>@</span>Chjewellery</h2>
-         <a>Follow Us</a>
-         <div class="contacts__wrapper">
-          <div class="contacts__item">
-            <picture>
-                <source type="image/webp" srcset="img/011x.webp 1x, img/012x.webp 2x">
-                <!-- 1x:342 2x:684 -->
-                <img src="img/011x.jpg" srcset="img/012x.jpg 2x" width="230" height="230" alt="Necklace with amethyst">
-              </picture>
-          </div>
-             <div class="contacts__item">
-              <picture>
-                <source type="image/webp" srcset="img/021x.webp 1x, img/022x.webp 2x">
-                <!-- 1x:342 2x:684 -->
-                <img src="img/021x.jpg" srcset="img/022x.jpg 2x" width="399" height="412" alt="Necklace with amethyst">
-              </picture>
-           </div>
-              <div class="contacts__item">
-            <picture>
-                <source type="image/webp" srcset="img/031x.webp 1x, img/032x.webp 2x">
-                <!-- 1x:342 2x:684 -->
-                <img src="img/031x.jpg" srcset="img/032x.jpg 2x" width="230" height="230" alt="Necklace with amethyst">
-              </picture>
-          </div>
-          <div class="contacts__item">
-            <picture>
-                <source type="image/webp" srcset="img/041x.webp 1x, img/042x.webp 2x">
-                <!-- 1x:342 2x:684 -->
-                <img src="img/041x.jpg" srcset="img/042x.jpg 2x" width="230" height="230" alt="Necklace with amethyst">
-              </picture>
-          </div>
-          <div class="contacts__item">
-            <picture>
-                <source type="image/webp" srcset="img/051x.webp 1x, img/052x.webp 2x">
-                <!-- 1x:342 2x:684 -->
-                <img src="img/051x.jpg" srcset="img/052x.jpg 2x" width="230" height="150" alt="Necklace with amethyst">
-              </picture>
-          </div>
-          <div class="contacts__item">
-            <picture>
-                <source type="image/webp" srcset="img/061x.webp 1x, img/062x.webp 2x">
-                <!-- 1x:342 2x:684 -->
-                <img src="img/061x.jpg" srcset="img/062x.jpg 2x" width="230" height="150" alt="Necklace with amethyst">
-              </picture>
-          </div>
-          <div class="contacts__item">
-            <picture>
-                <source type="image/webp" srcset="img/071x.webp 1x, img/072x.webp 2x">
-                <!-- 1x:342 2x:684 -->
-                <img src="img/071x.jpg" srcset="img/072x.jpg 2x" width="230" height="150" alt="Necklace with amethyst">
-              </picture>
-          </div>
-
-
-         </div>
-       </section>
 
        </main>
-        <footer class="footer">
+        <footer  class="footer">
       <div class="footer__content">
         <div class="footer__mailing">
          <form class="form feedback__form" action="https://echo.htmlacademy.ru" method="get">
@@ -425,45 +384,46 @@ crystals</h3>
       </div>
     </footer>
   </div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js
-"></script>
- <script src="js/slick.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
 
 
 
-
-
-    <section class="modal modal--hidden">
-    <div class="modal__wrapper">
-      <button type="button" class="modal__close" tabindex="6">
-        <svg width="17" height="17">
-          <use href="sprite.svg#close"></use>
-        </svg>
-      </button>
-      <h2>Закажите звонок</h2>
-      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <form class="form modal__form" action="https://echo.htmlacademy.ru" method="get">
-        <label class="visually-hidden" for="modal__name">имя</label>
-        <input type="text" id="modal__name" name="name" placeholder="Имя" required="" tabindex="1">
-        <label class="visually-hidden" for="modal__tel">телефон</label>
-        <input type="tel" id="modal__tel" name="phone_number-modal" pattern="[+]7[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Телефон" maxlength="16" required="" tabindex="2">
-        <label class="visually-hidden" for="modal__comment">Отзыв</label>
-        <textarea id="modal__comment" name="comment" placeholder="Ваш вопрос" tabindex="3"></textarea>
-        <label for="agreement__modal">
-          <input type="checkbox" id="agreement__modal" name="agreement" required="" tabindex="4">
-          <span></span>
-            Я согласен на обработку  персональных данных
+<!--
+  <div class="filter-item">
+          <button type="button" class="filter-item__trigger">
+         <h2>Product</h2></button>
+         <div class="filter-item__content">
+           <ul>
+           <li>
+           <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="Necklaces" id="Necklaces" checked>
+          <label for="Necklaces" class="filter-label">
+          <span class="checkbox-square">
+          </span>
+          Necklaces
         </label>
-        <button type="submit" tabindex="5">Отправить</button>
-
-      </form>
-    </div>
-
-    </section>
-  
-
-  
+           </li>
+           <li><input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="Chokers" id="Chokers" checked>
+          <label for="Chokers" class="filter-label">
+          <span class="checkbox-square">
+          </span>
+          Chokers
+        </label></li>
+           <li><input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="Rings" id="Rings" checked>
+          <label for="Rings" class="filter-label">
+          <span class="checkbox-square">
+          </span>
+          Rings
+        </label></li>
+           <li><input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="Earrings" id="Earrings" checked>
+          <label for="Earrings" class="filter-label">
+          <span class="checkbox-square">
+          </span>
+          Earrings
+        </label></li>
+         </ul>
+         </div>
+        </div>
+-->
 

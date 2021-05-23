@@ -1,5 +1,16 @@
 .header {
   margin-bottom: 2rem;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
+//    margin-bottom: 1.5rem;
+    min-height: 126px;
+  }
+
+  @media (max-width: $mobile-width) {
+
+    min-height: 92px;
+  }
 }
 
 .header__content {
@@ -8,13 +19,15 @@
 
   max-width: 1190px;
   margin: 0 auto;
-  outline: 5px solid red;
   grid-gap: 0;
   padding-left: 1rem;
 
 
   @media (max-width: $tablet-width) {
     padding-bottom: 2rem;
+  }
+  @media (max-width: $tablet-width) {
+    padding-bottom: 0;
   }
 }
 
@@ -45,6 +58,11 @@
     display: block;
     outline: none;
     z-index: 1;
+
+    @media (max-width: $mobile-width) {
+      left: 0;
+      top: 2rem;
+    }
 
     &:hover,
     &:focus {
@@ -125,12 +143,22 @@
   fill: white;
 }
 
+.header__center svg {
+  @media (max-width: $mobile-width) {
+    height: 52px;
+    width: 52px;
+  }
+}
+
 .header__center  {
   margin-top: 3rem;
   text-align: center;
 
   @media (max-width: $tablet-width) {
     grid-column: 2 / 3;
+  }
+  @media (max-width: $mobile-width) {
+    margin-top: 2rem;
   }
 }
 
@@ -149,6 +177,13 @@
     margin-top: 5.5rem;
     margin-right: 3.5rem;
   }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 4rem;
+    margin-right: 1rem;
+  }
+
+
 }
 
 .header__right a {
@@ -198,7 +233,7 @@
   padding-top: 3rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 3rem;
+  grid-column-gap: 3.5rem;
   font-size: 16px;
   line-height: 24px;
   font-family: "Poppins", "Arial", sans-serif;
