@@ -69,6 +69,10 @@ grid-row-gap: 30px;
 
 }
 
+.contacts__item {
+  cursor: pointer;
+}
+
 .contacts__item:first-child {
   @media (max-width: $tablet-width) {
     min-width: 133px;

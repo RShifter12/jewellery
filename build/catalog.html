@@ -24,7 +24,7 @@
 </head>
 <body>
   <div class="content">
-    <header class="header header--closed header--nojs">
+    <header class="header header--closed">
       <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="header__content">
         <div class="header__left">
@@ -71,38 +71,47 @@
         <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
       </section>
       <section class="products products--catalog">
-       <aside class="filter">
+      <button type="button" class="filter-toggle">Filter</button>
+       <aside class="filter filter--closed">
+
        <form action="https://echo.htmlacademy.ru" method="get">
+       <button type="button" class="filter__close"><span class="visually-hidden">закрыть меню</span></button>
        <div class="filter__content">
          <div class="filter-item">
            <button type="button" class="filter-item__trigger">
              <h2>Product</h2>
             </button>
             <div class="filter-item__content">
-
+              <ul>
+                <li>
                   <label class="filter__label">
-                    <input class="filter__input" type="checkbox" name="Necklaces" checked="">
+                    <input class="filter__input" type="checkbox" name="Necklaces" i="" checked="">
                   <span class="checkbox"></span>
                   Necklaces
                   </label>
-
+                </li>
+               <li>
                   <label class="filter__label">
                     <input class="filter__input" type="checkbox" name="Chokers" checked="">
                     <span class="checkbox"></span>
                     Chokers
                   </label>
-
+              </li>
+              <li>
                 <label class="filter__label">
                   <input class=" filter__input" type="checkbox" name="Rings">
                   <span class="checkbox"></span>
                   Rings
                 </label>
-
+              </li>
+              <li>
                 <label class="filter__label">
                   <input class="filter__input" type="checkbox" name="Earrings" checked="">
                   <span class="checkbox"></span>
                   Earrings
                   </label>
+              </li>
+            </ul>
          </div>
         </div>
 
@@ -159,12 +168,23 @@
           <button type="button" class="filter-item__trigger">
          <h2>Product</h2></button>
          <div class="filter-item__content">
-          <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+           <div class="range-filter">
+          <div class="range-controls">
+            <div class="scale">
+
+            </div>
+            <div class="toggle toggle-min"></div>
+            <div class="toggle toggle-max"></div>
+          </div>
+          </div>
          </div>
         </div>
        </div>
-        <button type="submit">Apply</button>
+       <div class="filter__buttons">
+         <button type="submit">Apply</button>
         <button type="reset">Clear All</button>
+       </div>
+
 
          </form>
        </aside>
@@ -301,7 +321,8 @@
             <h3>Necklace with amethyst</h3>
             <p>$ 145</p>
           </div>
-          <a href="">previous</a>
+          <div class="slider__pages">
+            <a href="">Previous</a>
         <ol>
           <li>1</li>
           <li>2</li>
@@ -309,7 +330,9 @@
           <li>4</li>
           <li>5</li>
         </ol>
-        <a href="">next</a>
+        <a href="">Next</a>
+          </div>
+
         </div>
 
       </section>
@@ -384,6 +407,8 @@
       </div>
     </footer>
   </div>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js
+"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

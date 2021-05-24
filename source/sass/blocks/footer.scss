@@ -217,9 +217,14 @@ line-height: 21px;
 .footer__contacts li {
   margin-bottom: 1.7rem;
 
+
   @media (max-width: $mobile-width) {
     margin-right: 2rem;
   }
+}
+
+.footer__contacts a {
+  display: flex;
 }
 
 .footer__contacts p {

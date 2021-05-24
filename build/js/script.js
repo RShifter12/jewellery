@@ -56,7 +56,7 @@ for (var i = 0; i < acc.length; i++) {
 var pageHeader = document.querySelector('.header');
 var headerToggle = document.querySelector('.header__toggle');
 
-pageHeader.classList.remove('page-header--nojs');
+pageHeader.classList.remove('header--nojs');
 
 headerToggle.addEventListener('click', function () {
   if (pageHeader.classList.contains('header--closed')) {
@@ -65,6 +65,32 @@ headerToggle.addEventListener('click', function () {
   } else {
     pageHeader.classList.add('header--closed');
     pageHeader.classList.remove('header--opened');
+  }
+});
+
+var filter = document.querySelector('.filter');
+var filterToggle = document.querySelector('.filter-toggle');
+
+filterToggle.addEventListener('click', function () {
+  if (filter.classList.contains('filter--closed')) {
+    filter.classList.remove('filter--closed');
+    filter.classList.add('filter--opened');
+  } else {
+    filter.classList.add('filter--closed');
+    filter.classList.remove('filter--opened');
+  }
+});
+
+
+var filterClose = document.querySelector('.filter__close');
+
+filterClose.addEventListener('click', function () {
+  if (filter.classList.contains('filter--opened')) {
+    filter.classList.remove('filter--opened');
+    filter.classList.add('filter--closed');
+  } else {
+    filter.classList.add('filter--opened');
+    filter.classList.remove('filter--closed');
   }
 });
 
