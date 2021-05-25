@@ -1,6 +1,6 @@
 .faq {
   max-width: 990px;
-  min-height: 720px;
+  min-height: 715px;
   margin: 0 auto;
   text-align: center;
   padding-left: 1rem;
@@ -45,6 +45,7 @@
 .accordion-item {
 //  padding-bottom: 3.5rem;
   border-bottom: 1px solid $primary;
+
   min-height: 112px;
 
   @media (max-width: $tablet-width) {
@@ -62,9 +63,9 @@
   display: block;
   color: $text-black;
   cursor: pointer;
-  padding-top: 3rem;
+  padding-top: 4rem;
   padding-left: 4rem;
-  padding-bottom: 7px;
+  padding-bottom: 70px;
   width: 100%;
   border: none;
   text-align: left;
@@ -77,8 +78,10 @@
 
   @media (max-width: $tablet-width) {
      padding-left: 5rem;
-    height: 8.5rem;
-    padding-top: 2.5rem;
+    height: 3.5rem;
+    padding-top: 4.5rem;
+      padding-bottom: 40px;
+
   }
 
   @media (max-width: $mobile-width) {
@@ -105,6 +108,9 @@
   opacity: 0;
   margin-bottom: 3rem;
 //  min-height: 112px;
+  margin-top: -50px;
+    margin-bottom: 20px;
+
 
 
   overflow: hidden;
@@ -113,6 +119,7 @@
    @media (max-width: $tablet-width) {
       margin-bottom: 0;
       max-width: 80%;
+      margin-top: -20px;
 
   }
 
@@ -122,6 +129,8 @@
 
   }
 }
+
+
 
 
 .accordion-item__trigger::after {
@@ -140,10 +149,10 @@
 
   @media (max-width: $tablet-width) {
     position: absolute;
-    right: 40px;
-    top: 5rem;
+    right: 45px;
+    top: 5.5rem;
     width: 25px;
-    height: 10px;
+    height: 15px;
     margin-right: 0;
   }
 
@@ -172,8 +181,8 @@
 
   @media (max-width: $tablet-width) {
     position: absolute;
-    right: 40px;
-    top: 5rem;
+    right: 45px;
+    top: 4rem;
     width: 25px;
     height: 10px;
     margin-right: 0;
@@ -193,6 +202,8 @@
 .accordion-item h3 {
   font-weight: 500;
   font-family: "Poppins", "Arial", sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @media (max-width: $tablet-width) {
     font-size: 16px;
@@ -216,7 +227,7 @@
 
 
 .accordion-item__content p {
-  margin-top: 1rem;
+//  margin-top: 1rem;
   font-family: "Poppins", "Arial", sans-serif;
   font-size: 16px;
   line-height: 130%;
@@ -225,6 +236,7 @@
   @media (max-width: $tablet-width) {
     font-size: 16px;
     line-height: 130%;
+    margin-top: 3rem;
   }
 
 

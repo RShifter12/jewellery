@@ -4,7 +4,7 @@
   text-align: center;
   margin-top: 12rem;
   color: $text-black;
-  margin-bottom: 11rem;
+  margin-bottom: 12rem;
 
 
 
@@ -95,7 +95,7 @@ line-height: 21px;
 //  object-fit: cover;
   @media (max-width: $tablet-width) {
     max-width: 324px;
-    max-height: 340px;
+    min-height: 340px;
   }
 
 
@@ -191,10 +191,11 @@ line-height: 21px;
   align-items: center;
   justify-content: center;
   padding: 0;
-  margin-top: -3rem;
+  margin-top: 2rem;
 
   @media (max-width: $tablet-width) {
     margin-top: 1rem;
+
   }
 }
 
@@ -214,6 +215,10 @@ line-height: 21px;
   border: none;
   background-color: transparent;
   opacity: 0.5;
+
+  @media (max-width: $tablet-width) {
+
+  }
 }
 
 .slick-track {
@@ -735,3 +740,127 @@ line-height: 130%;
 
 
 }
+
+
+// card.html
+
+
+.products--card {
+  margin-top: 11rem;
+  margin-bottom: 14rem;
+  max-width: 1180px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 4rem;
+    margin-bottom: 4.5rem;
+  }
+
+
+}
+
+.products--card h2 {
+  font-size: 34px;
+line-height: 130%;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 2rem;
+    padding-left: 0;
+
+  }
+
+  @media (max-width: $mobile-width) {
+      font-size: 32px;
+
+    margin-top: 4.5rem;
+
+  }
+
+
+}
+
+.slider--card .slider__item {
+
+  @media (max-width: $tablet-width) {
+    margin-top: 5rem;
+  }
+}
+
+.slider__wrapper--card img {
+//  min-width: 270px;
+//  min-height: 284px;
+
+  @media (max-width: $tablet-width) {
+    min-height: 340px;
+    max-width: 324px;
+
+  }
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
+    object-fit: fill;
+//    max-width: 130px;
+//    max-height: 136px;
+    min-height: 136px;
+  }
+}
+
+.slider--card {
+
+  @media (max-width: $tablet-width) {
+    max-width: 710px;
+  }
+
+
+}
+
+.slider--card .slick-dots  {
+  margin-top: 1.7rem;
+  height: 12px;
+}
+
+.slider--card .slick-arrow.slick-prev {
+  left: 0.5rem;
+
+  @media (max-width: $tablet-width) {
+    left: 1.5rem;
+  }
+}
+
+.slider--card .slick-arrow.slick-next {
+  right: 0.5rem;
+
+  @media (max-width: $tablet-width) {
+    right: 1.5rem;
+  }
+}
+
+.product__number {
+  display: none;
+  @media (max-width: $mobile-width) {
+    display: block;
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 16px;
+line-height: 130%;
+  }
+
+
+}
+
+
+
+.slider .slick-dots button {
+   @media (max-width: $tablet-width) {
+    font-family: "Poppins", "Arial", sans-serif;
+    color: #000;
+    opacity: 0.5;
+    font-size: 16px;
+    width: 16px;
+    margin-right: .6rem;
+  }
+}
+
+

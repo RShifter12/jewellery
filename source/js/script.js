@@ -15,13 +15,38 @@ $(document).ready(function() {
           slidesToShow: 2,
           slidesToScroll: 2
         }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          dots: false,
+          arrows: false,
+          slidesToShow: 2,
+          slidesToScroll: 2
+
+        }
       }
     ]
   });
 });
 
 
+$(window).on('load resize', function() {
+  if ($(window).width() < 767) {
+    $('.card__images').slick({
+      arrows: false,
+      dots: false,
+      adaptiveHeight: true,
+      infinite: true,
+      speed: 100,
+      slidesToShow: 1,
+      cssEase: 'linear'
 
+    });
+  } else {
+    $('.card__images').slick("unslick");
+  }
+});
 
 
 var acc = document.querySelectorAll('.accordion-item__trigger');
