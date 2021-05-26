@@ -2,126 +2,424 @@
   display: none;
 }
 
-.modal {
-  background-color: $primary;
-  position: absolute;
+
+//modalLogin
+
+.modal--login {
+  background-color: #f0eae4;
+  position: fixed;
   z-index: 100;
-  height: 605px;
-  top: 13.5rem;
+  width: 430px;
+  height: 586px;
+  margin: 0 auto;
+  top: 100px;
   left: 50%;
-  width: 49rem;
+  box-shadow: 0px 4px 32px rgba(121, 121, 121, 0.24);
   transform: translate(-50%, 00%);
+
+
 }
+
+.modal--login .modal__wrapper {
+  width: 340px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.modal--login h2 {
+  text-align: center;
+  font-size: 34px;
+  line-height: 130%;
+}
+
+.modal--login .modal__wrapper input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid $text-black;
+  height: 3rem;
+  margin-bottom: 4rem;
+
+  &::placeholder {
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: #9b9997;
+
+  }
+}
+
+.modal--login .modal__form a {
+  font-family: "Poppins", "Arial", sans-serif;
+  text-align: right;
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  line-height: 18px;
+  color: #9b9997;
+  position: absolute;
+  top: 17.5rem;
+
+  &:hover,
+  &:focus {
+    color: darken($text-black, 15%);
+  }
+
+  &:active {
+    color: darken($text-black, 25%);
+  }
+
+}
+
+
+.modal--login .modal__wrapper button {
+  width: 340px;
+  height: 68px;
+  background-color: $primary;
+  color: white;
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: darken($primary, 15%);
+  }
+
+  &:active {
+    background-color: darken($primary, 25%);
+  }
+
+}
+
+.modal--login .modal__signup {
+  font-family: "Poppins", "Arial", sans-serif;
+
+  display: flex;
+}
+
+.modal--login .modal__signup p {
+  color: #9B9997;
+
+}
+
+.modal--login .modal__signup a {
+  height: 100%;
+  align-self: center;
+  margin-left: 1rem;
+
+  &:hover,
+  &:focus {
+    color: lighten($text-black, 15%);
+  }
+
+  &:active {
+    color: lighten($text-black, 25%);
+  }
+}
+
+
+
+
+//login--nojs
+
+.modal__back {
+  outline: none;
+  border: none;
+  position: absolute;
+  stroke: $primary;
+  transform: rotate(180deg);
+  width: 6rem;
+  height: 5rem;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    stroke: white;
+  }
+
+}
+
 
 .modal--nojs {
-  display: block;
-  width: 1920px;
-  height: 100vh;
-  top: 0;
-}
-
-.modal__wrapper {
-  max-width: 412px;
+  background-color: #f0eae4;
+//  position: fixed;
+  z-index: 100;
+  width: 430px;
+  height: 586px;
   margin: 0 auto;
+//  top: 100px;
+  top: 0;
+  left: 50%;
+  box-shadow: 0px 4px 32px rgba(121, 121, 121, 0.24);
+
+//  position: relative;
 }
 
-.modal h2 {
-  font-size: 28px;
-  line-height: 39px;
+.modal__logo {
+  text-align: center;
+}
+
+
+
+// modalCard
+
+.modal--card {
+  background-color: white;
+  position: fixed;
+  z-index: 100;
+  width: 500px;
+  margin: 0 auto;
+  height: 439px;
+  top: 300px;
+  left: 50%;
+  box-shadow: 0px 4px 32px rgba(121, 121, 121, 0.24);
+
+
+  transform: translate(-50%, 00%);
+
+  @media (max-width: $mobile-width) {
+    top: 115px;
+    width: 310px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 519px;
+  }
+}
+
+//.modal--nojs {
+//  display: block;
+//  width: 1920px;
+//  height: 100vh;
+//  top: 0;
+//}
+
+.modal--card .modal__wrapper {
+  max-width: 430px;
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width) {
+    max-width: 260px;
+  }
+
+}
+
+.modal__item--card {
+  flex-grow: 0;
+
+}
+
+.modal__item--card h3 {
+  margin-top: -4px;
+  margin-bottom: 1rem;
+  font-size: 18px;
+line-height: 130%;
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+line-height: 130%;
+  }
+
+}
+
+.modal__item--card p {
+  margin-top: 0;
+  margin-bottom: 0;
+    font-family: "Poppins", "Arial", sans-serif;
+  font-size: 18px;
+line-height: 130%;
+
+}
+
+.modal__item--card button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal__item--card svg {
+
+  fill: #9b9997;
+
+  &:hover,
+  &:focus {
+    fill: black;
+  }
+}
+
+.modal__item--card:nth-child(2n) {
+  flex-grow: 2;
+
+}
+
+.modal__item--card:nth-child(3n) {
+
+  text-align: center;
+
+}
+
+.modal__item--card:nth-child(3n) p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.modal__desc--card {
+  display: flex;
+  column-gap: 2rem;
+  margin-bottom: 3rem;
+
+}
+
+.modal__item--card img {
+
+  @media (max-width: $mobile-width) {
+    width: 70px;
+    height: 63px;
+  }
+
+}
+
+.modal--card h2 {
   font-weight: normal;
   color: white;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 4.5rem;
+  color: $text-black;
+  text-align: center;
+
+  font-size: 26px;
+line-height: 130%;
+
+  @media (max-width: $mobile-width) {
+    max-width: 200px;
+    margin: 0 auto;
+    margin-top: 4rem;
+  margin-bottom: 3.5rem;
+    font-size: 24px;
+line-height: 120%;
+  }
 }
 
-.modal p {
-  font-size: 16px;
-  line-height: 22px;
-  color: white;
-  font-family: "PT Mono", "Arial", monospace;
-  max-width: 90%;
+.modal--card .modal__sum {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+
+  @media (max-width: $mobile-width) {
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
 }
 
-.modal__form {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr min-content;
-  grid-gap: 3.5rem;
-  margin-top: 2.5rem;
-}
-
-.modal label {
+.modal--card .modal__sum p {
+      font-family: "Poppins", "Arial", sans-serif;
   font-size: 14px;
-  line-height: 16px;
-  font-family: "PT Mono", "Arial", monospace;
-  color: white;
-  opacity: 0.8;
+line-height: 130%;
+
+  @media (max-width: $mobile-width) {
+    font-size: 12px;
+line-height: 130%;
+  }
 }
+
+.modal--card .modal__buttons {
+  display: flex;
+  justify-content: center;
+  column-gap: 3rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: $mobile-width) {
+    flex-wrap: wrap;
+    row-gap: 2rem;
+  }
+}
+
+
+.modal--card .modal__buttons a:first-child {
+
+  background-color: white;
+  border: 1px solid $primary;
+  color: $text-black;
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: $primary;
+  }
+
+  &:active {
+    background-color: darken($primary, 25%);
+  }
+}
+
+.modal--card .modal__buttons a {
+
+  white-space: nowrap;
+  width: 200px;
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  background-color: $primary;
+  color: white;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: "Poppins", "Arial", sans-serif;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $text-black;
+    background-color: white;
+    border: 1px solid $primary;
+  }
+
+  &:active {
+    color: white;
+    background-color: darken($primary, 25%);
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 260px;
+  }
+
+
+}
+
+//.modal__buttons button {
+//      font-family: "Poppins", "Arial", sans-serif;
+//  background-color: white;
+//  border: 1px solid $primary;
+//  width: 200px;
+//height: 70px;
+//  font-size: 16px;
+//line-height: 130%;
+//
+//}
 
 .modal__close {
+
   position: absolute;
-  right: 1.5rem;
+  right: 2.5rem;
   background: none;
   border: none;
   top: 2rem;
   cursor: pointer;
+  fill: $text-black;
+
+  height: 14px;
+  width: 14px;
+
+  &:hover,
+  &:focus {
+    fill: lighten(white, 15%);
+  }
+
+  &:active {
+    color: darken(white, 25%);
+  }
 }
 
-.modal__form input:not(input[type="checkbox"]) {
-  height: 5rem;
-  width: 100%;
-  background-color: #02b4ff;
-  border: none;
-  color: white;
-  font-family: inherit;
-  padding-left: 2rem;
-  font-size: 16px;
-  grid-column: span 2;
-}
 
-.modal__form textarea {
-  margin-top: 0;
-  height: 10rem;
-  margin-bottom: 0;
-}
 
-.modal__form button {
-  width: 100%;
-  grid-column: span 2;
-  grid-row: 4;
-}
-
-.modal__form input[type="checkbox"]:checked + span {
-  background-image: url(".././img/checkon.svg");
-}
-
-.modal__form input[type="checkbox"]:focus + span {
-  background-image: url(".././img/checkoff.svg");
-  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(255, 255, 255, 0.7);
-}
-
-.modal__form input[type="checkbox"]:focus:checked + span {
-  background-image: url(".././img/checkon.svg");
-  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(255, 255, 255, 0.7);
-}
-
-.modal__form span {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-image: url(".././img/checkoff.svg");
-  margin-left: -5rem;
-  margin-top: 0.5rem;
-}
-
-.modal__form label {
-  left: 5rem;
-  top: 39rem;
-  width: 100%;
-}
-
-.modal__form label:nth-child(7n) {
-  max-width: 36rem;
-  margin-top: -0.5rem;
-  margin-left: 0;
-}

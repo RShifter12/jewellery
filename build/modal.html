@@ -1,51 +1,93 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Производство и монтаж, поставка комплектующих, блоков и модулей">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Smart Device</title>
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-300.woff" as="font" crossorigin="">
-    <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-300.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff" as="font" crossorigin="">
-    <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff" as="font" crossorigin="">
-    <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/pt-mono-v8-latin_cyrillic-regular.woff" as="font" crossorigin="">
-    <link rel="preload" href="fonts/pt-mono-v8-latin_cyrillic-regular.woff2" as="font" crossorigin="">
-  </head>
-  <body class="body">
-    <div class="content">
-      <main class="main">
-        <section class="modal modal--nojs">
-          <div class="modal__wrapper">
-            <button type="button" class="modal__close" tabindex="6">
-              <svg width="17" height="17">
-                <use href="sprite.svg#close"></use>
-              </svg>
-            </button>
-            <h2>Закажите звонок</h2>
-            <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-            <form class="form modal__form" action="https://echo.htmlacademy.ru" method="get">
-              <label class="visually-hidden" for="modal__name">имя</label>
-              <input type="text" id="modal__name" name="name" placeholder="Имя" required="" tabindex="1">
-              <label class="visually-hidden" for="modal__tel">телефон</label>
-              <input type="tel" id="modal__tel" name="phone_number-modal" pattern="[+]7[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Телефон" maxlength="16" required="" tabindex="2">
-              <label class="visually-hidden" for="modal__comment">Отзыв</label>
-              <textarea id="modal__comment" name="comment" placeholder="Ваш вопрос" tabindex="3"></textarea>
-              <label for="agreement__modal">
-                <input type="checkbox" id="agreement__modal" name="agreement" required="" tabindex="4">
-                <span></span>
-                  Я согласен на обработку  персональных данных
-              </label>
-              <button type="submit" tabindex="5">Отправить</button>
-            </form>
-          </div>
-        </section>
-    </main>
+    <title>Jewellery</title>
+     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff" as="font" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff2" as="font" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff" as="font" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff2" as="font" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff" as="font" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff2" as="font" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-300.woff" as="font" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-300.woff2" as="font" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff" as="font" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff" as="font" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff" as="font" crossorigin="">
+</head>
+<body>
+  <div class="content">
+
+    <main>
+
+
+<section class="modal modal--login modal--nojs">
+    <a href="index.html" class="modal__back" tabindex="6">
+        <svg width="40" height="40">
+          <use href="sprite.svg#vector"></use>
+        </svg>
+      </a>
+    <div class="modal__image">
+      <picture>
+        <source type="image/webp" srcset="img/modal-login1x.webp 1x, img/modal-login2x.webp 2x">
+        <!-- 1x:342 2x:684 -->
+        <img src="img/modal-login1x.jpg" srcset="img/modal-login2x.jpg 2x" width="430" height="138" alt="Gold Necklace">
+      </picture>
+    </div>
+
+    <div class="modal__wrapper">
+
+      <h2>Log In</h2>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+      <label class="visually-hidden" for="modal__email">имя</label>
+      <input type="email" id="modal__email" name="email" placeholder="Your E-mail" required="" tabindex="1">
+      <label class="visually-hidden" for="modal__password">имя</label>
+      <input type="password" id="modal__password" name="password" placeholder="Password" required="" tabindex="2">
+      <a href="" tabindex="3">Forgot your password?</a>
+      <button type="button" tabindex="4">Log In</button>
+      </form>
+      <div class="modal__signup">
+        <p>Don’t have an account?</p>
+      <a tabindex="5">Sign up</a>
+      </div>
+      <div class="modal__logo">
+          <a>
+          <svg class="logo" width="66" height="66">
+            <use href="sprite.svg#logo"></use>
+          </svg>
+          </a>
+        </div>
+      </div>
+
+
+
+    </section>
+
+       </main>
+
+
+
+
+
   </div>
+<!--
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js
+"></script>
+ <script src="js/slick.min.js"></script>
   <script src="js/script.js"></script>
-  </body>
+-->
+</body>
 </html>
+
+
+
+
+
+
