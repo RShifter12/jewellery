@@ -2,22 +2,27 @@
   display: none;
 }
 
-
 //modalLogin
 
 .modal--login {
-  background-color: #f0eae4;
   position: fixed;
   z-index: 100;
+  top: 0;
+  left: 50%;
+  box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24);
+  transform: translate(-50%, 00%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal--login .modal__content {
   width: 430px;
   height: 586px;
+  background-color: #f0eae4;
   margin: 0 auto;
-  top: 100px;
-  left: 50%;
-  box-shadow: 0px 4px 32px rgba(121, 121, 121, 0.24);
-  transform: translate(-50%, 00%);
-
-
+  margin-top: 10rem;
+  position: relative;
 }
 
 .modal--login .modal__wrapper {
@@ -40,13 +45,17 @@
   border-bottom: 1px solid $text-black;
   height: 3rem;
   margin-bottom: 4rem;
+  color: $text-black;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+
 
   &::placeholder {
     font-family: "Poppins", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     color: #9b9997;
-
   }
 }
 
@@ -69,7 +78,6 @@
   &:active {
     color: darken($text-black, 25%);
   }
-
 }
 
 
@@ -89,18 +97,15 @@
   &:active {
     background-color: darken($primary, 25%);
   }
-
 }
 
 .modal--login .modal__signup {
   font-family: "Poppins", "Arial", sans-serif;
-
   display: flex;
 }
 
 .modal--login .modal__signup p {
-  color: #9B9997;
-
+  color: #9b9997;
 }
 
 .modal--login .modal__signup a {
@@ -117,9 +122,6 @@
     color: lighten($text-black, 25%);
   }
 }
-
-
-
 
 //login--nojs
 
@@ -138,45 +140,34 @@
   &:focus {
     stroke: white;
   }
-
 }
-
 
 .modal--nojs {
   background-color: #f0eae4;
-//  position: fixed;
   z-index: 100;
   width: 430px;
   height: 586px;
   margin: 0 auto;
-//  top: 100px;
   top: 0;
   left: 50%;
-  box-shadow: 0px 4px 32px rgba(121, 121, 121, 0.24);
-
-//  position: relative;
+  box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24);
 }
 
 .modal__logo {
   text-align: center;
 }
 
-
-
 // modalCard
 
 .modal--card {
-  background-color: white;
   position: fixed;
   z-index: 100;
-  width: 500px;
-  margin: 0 auto;
-  height: 439px;
-  top: 300px;
+  top: 0;
   left: 50%;
-  box-shadow: 0px 4px 32px rgba(121, 121, 121, 0.24);
-
-
+  box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 22, 19, 0.5);
   transform: translate(-50%, 00%);
 
   @media (max-width: $mobile-width) {
@@ -188,48 +179,48 @@
   }
 }
 
-//.modal--nojs {
-//  display: block;
-//  width: 1920px;
-//  height: 100vh;
-//  top: 0;
-//}
+.modal--card .modal__content {
+  width: 500px;
+  height: 439px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 10rem;
+  position: relative;
+}
 
 .modal--card .modal__wrapper {
   max-width: 430px;
   margin: 0 auto;
+  height: 440px;
+  margin-top: 10rem;
 
   @media (max-width: $mobile-width) {
     max-width: 260px;
   }
-
 }
 
 .modal__item--card {
   flex-grow: 0;
-
 }
 
 .modal__item--card h3 {
   margin-top: -4px;
   margin-bottom: 1rem;
   font-size: 18px;
-line-height: 130%;
+  line-height: 130%;
 
   @media (max-width: $mobile-width) {
     font-size: 16px;
-line-height: 130%;
+    line-height: 130%;
   }
-
 }
 
 .modal__item--card p {
   margin-top: 0;
   margin-bottom: 0;
-    font-family: "Poppins", "Arial", sans-serif;
+  font-family: "Poppins", "Arial", sans-serif;
   font-size: 18px;
-line-height: 130%;
-
+  line-height: 130%;
 }
 
 .modal__item--card button {
@@ -240,7 +231,6 @@ line-height: 130%;
 }
 
 .modal__item--card svg {
-
   fill: #9b9997;
 
   &:hover,
@@ -251,13 +241,10 @@ line-height: 130%;
 
 .modal__item--card:nth-child(2n) {
   flex-grow: 2;
-
 }
 
 .modal__item--card:nth-child(3n) {
-
   text-align: center;
-
 }
 
 .modal__item--card:nth-child(3n) p {
@@ -269,36 +256,31 @@ line-height: 130%;
   display: flex;
   column-gap: 2rem;
   margin-bottom: 3rem;
-
 }
 
 .modal__item--card img {
-
   @media (max-width: $mobile-width) {
     width: 70px;
     height: 63px;
   }
-
 }
 
 .modal--card h2 {
   font-weight: normal;
-  color: white;
-  margin-top: 5rem;
+  padding-top: 5rem;
   margin-bottom: 4.5rem;
   color: $text-black;
   text-align: center;
-
   font-size: 26px;
-line-height: 130%;
+  line-height: 130%;
 
   @media (max-width: $mobile-width) {
     max-width: 200px;
     margin: 0 auto;
     margin-top: 4rem;
-  margin-bottom: 3.5rem;
+    margin-bottom: 3.5rem;
     font-size: 24px;
-line-height: 120%;
+    line-height: 120%;
   }
 }
 
@@ -314,13 +296,13 @@ line-height: 120%;
 }
 
 .modal--card .modal__sum p {
-      font-family: "Poppins", "Arial", sans-serif;
+  font-family: "Poppins", "Arial", sans-serif;
   font-size: 14px;
-line-height: 130%;
+  line-height: 130%;
 
   @media (max-width: $mobile-width) {
     font-size: 12px;
-line-height: 130%;
+    line-height: 130%;
   }
 }
 
@@ -355,7 +337,6 @@ line-height: 130%;
 }
 
 .modal--card .modal__buttons a {
-
   white-space: nowrap;
   width: 200px;
   padding-top: 2.5rem;
@@ -383,23 +364,9 @@ line-height: 130%;
   @media (max-width: $mobile-width) {
     width: 260px;
   }
-
-
 }
 
-//.modal__buttons button {
-//      font-family: "Poppins", "Arial", sans-serif;
-//  background-color: white;
-//  border: 1px solid $primary;
-//  width: 200px;
-//height: 70px;
-//  font-size: 16px;
-//line-height: 130%;
-//
-//}
-
 .modal__close {
-
   position: absolute;
   right: 2.5rem;
   background: none;
@@ -407,7 +374,6 @@ line-height: 130%;
   top: 2rem;
   cursor: pointer;
   fill: $text-black;
-
   height: 14px;
   width: 14px;
 
@@ -420,6 +386,3 @@ line-height: 130%;
     color: darken(white, 25%);
   }
 }
-
-
-

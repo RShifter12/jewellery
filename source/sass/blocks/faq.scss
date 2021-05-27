@@ -16,44 +16,41 @@
     min-width: 310px;
     min-height: 620px;
     padding-left: 1.5rem;
-  padding-right: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
 .faq h2 {
-   font-size: 34px;
+  font-size: 34px;
   line-height: 130%;
-
   letter-spacing: 0.03em;
   color: $text-black;
-    margin-bottom: 5rem;
+  margin-bottom: 5rem;
 
   @media (max-width: $mobile-width) {
     margin-bottom: 3rem;
   }
-
 }
 
 .faq__wrapper {
   border: 1px solid $primary;
   height: 100%;
+
   @media (max-width: $mobile-width) {
-//      max-width: 290px;
-      margin: 0 auto;
+    margin: 0 auto;
   }
 }
-.accordion-item {
-//  padding-bottom: 3.5rem;
-  border-bottom: 1px solid $primary;
 
+.accordion-item {
+  border-bottom: 1px solid $primary;
   min-height: 112px;
 
   @media (max-width: $tablet-width) {
-      padding-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   @media (max-width: $mobile-width) {
-      padding-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
     min-height: 82px;
   }
 }
@@ -72,66 +69,52 @@
   outline: none;
   font-size: 15px;
   transition: 0.4s;
-  background-color: white;
+  background-color: transparent;
   position: relative;
   height: 7rem;
+  z-index: 0;
 
   @media (max-width: $tablet-width) {
-     padding-left: 5rem;
+    padding-left: 5rem;
     height: 3.5rem;
     padding-top: 4.5rem;
-      padding-bottom: 40px;
-
+    padding-bottom: 40px;
   }
 
   @media (max-width: $mobile-width) {
-      font-size: 16px;
+    font-size: 16px;
     line-height: 140%;
-//    width: 74%;
     position: relative;
     padding-top: 1rem;
     padding-left: 2.5rem;
     padding-bottom: 0;
     height: 6.5rem;
   }
-
-
 }
 
 .accordion-item__content {
   margin-left: 5rem;
-    background-color: white;
-    max-height: 0;
+  background-color: white;
+  max-height: 0;
   max-width: 52rem;
   text-align: left;
-//  padding-bottom: 3rem;
   opacity: 0;
-  margin-bottom: 3rem;
-//  min-height: 112px;
   margin-top: -50px;
-    margin-bottom: 20px;
-
-
-
+  margin-bottom: 23px;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
 
-   @media (max-width: $tablet-width) {
-      margin-bottom: 0;
-      max-width: 80%;
-      margin-top: -20px;
-
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
+    max-width: 80%;
+    margin-top: -20px;
   }
 
-    @media (max-width: $mobile-width) {
-      margin-left: 2.5rem;
-      max-width: 72%;
-
+  @media (max-width: $mobile-width) {
+    margin-left: 2.5rem;
+    max-width: 72%;
   }
 }
-
-
-
 
 .accordion-item__trigger::after {
   position: absolute;
@@ -143,9 +126,8 @@
   height: 16px;
   font-size: 18px;
   float: right;
-  margin-right: 4.5rem;
-  top: 65%;
-//  margin-top: 1rem;
+  margin-right: 5rem;
+  top: 47%;
 
   @media (max-width: $tablet-width) {
     position: absolute;
@@ -166,8 +148,6 @@
   }
 }
 
-
-
 .active::after {
   content: "";
   background-image: url(".././img/arrowup.svg");
@@ -176,8 +156,9 @@
   height: 16px;
   font-size: 18px;
   float: right;
-  margin-left: 4px;
-  margin-top: 1rem;
+  margin-left: 0;
+  margin-top: 0;
+  top: 45%;
 
   @media (max-width: $tablet-width) {
     position: absolute;
@@ -199,39 +180,33 @@
 }
 
 
-.accordion-item h3 {
+.accordion-item b {
   font-weight: 500;
   font-family: "Poppins", "Arial", sans-serif;
   margin-top: 0;
   margin-bottom: 0;
 
   @media (max-width: $tablet-width) {
-    font-size: 16px;
-    line-height: 140%;
     max-width: 90%;
     font-size: 18px;
     line-height: 130%;
   }
 
   @media (max-width: $mobile-width) {
-      font-weight: 400;
+    font-weight: 400;
     font-size: 16px;
     max-width: 78%;
     margin-top: 0;
     margin-bottom: 0;
-
-
-
   }
 }
 
-
 .accordion-item__content p {
-//  margin-top: 1rem;
   font-family: "Poppins", "Arial", sans-serif;
   font-size: 16px;
   line-height: 130%;
   color: $text-black;
+  z-index: 10;
 
   @media (max-width: $tablet-width) {
     font-size: 16px;
@@ -239,13 +214,9 @@
     margin-top: 3rem;
   }
 
-
-
   @media (max-width: $mobile-width) {
     font-size: 14px;
     line-height: 140%;
     margin-bottom: 2rem;
   }
 }
-
-

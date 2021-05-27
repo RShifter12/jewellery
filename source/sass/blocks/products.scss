@@ -41,6 +41,15 @@
   line-height: 21px;
   color: $text-black;
   border-bottom: 1px solid $primary;
+
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
+
+  &:active {
+    color: darken($primary, 25%);
+  }
 }
 
 .slider {
@@ -62,7 +71,6 @@
     margin-top: 4rem;
   }
 }
-
 
 .slider__wrapper img {
   width: 100%;
@@ -148,16 +156,15 @@
   justify-content: center;
   padding: 0;
   margin-top: 2rem;
+  cursor: pointer;
 
   @media (max-width: $tablet-width) {
     margin-top: 1rem;
   }
 }
 
-
 .slider .slick-dots li {
   list-style: none;
-
 }
 
 .slider .slick-dots li.slick-active button {
@@ -172,7 +179,12 @@
   opacity: 0.5;
 
   @media (max-width: $tablet-width) {
-
+    font-family: "Poppins", "Arial", sans-serif;
+    color: black;
+    opacity: 0.5;
+    font-size: 16px;
+    width: 16px;
+    margin-right: 0.6rem;
   }
 }
 
@@ -187,7 +199,6 @@
     padding-left: 2rem;
     padding-right: 2rem;
   }
-
 }
 
 .slick-list {
@@ -203,14 +214,21 @@
 .products--catalog {
   display: flex;
   margin-top: 8rem;
-  max-width: 1200px;
+  max-width: 1190px;
   padding-right: 1rem;
   padding-left: 1rem;
 
   @media (max-width: $tablet-width) {
     display: block;
+    margin-top: 5rem;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 }
+
 .filter-toggle {
   display: none;
 
@@ -227,6 +245,10 @@
     font-family: "Poppins", "Arial", sans-serif;
     margin-bottom: 5rem;
   }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 4rem;
+  }
 }
 
 .slider--catalog {
@@ -236,29 +258,42 @@
   grid-row-gap: 0;
   grid-column-gap: 3rem;
 
+  @media (max-width: $tablet-width) {
+    max-width: 680px;
+    margin-bottom: 6rem;
+  }
+
   @media (max-width: $mobile-width) {
-    display: grid;
-    grid-template: repeat(6, min-content) / repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
   }
 }
 
 .slider--catalog .slider__item {
   margin-top: 0;
   margin-right: 0;
+
+  @media (max-width: $mobile-width) {
+    width: 45%;
+  }
 }
 
-.slider--catalog  img {
+.slider__wrapper--catalog img {
   width: 100%;
   max-height: 272px;
 
   @media (max-width: $tablet-width) {
     max-width: 206px;
+    min-height: 208px;
     max-height: 208px;
   }
 
   @media (max-width: $mobile-width) {
-    max-width: 130px;
+    min-width: 130px;
     max-height: 136px;
+    height: 136px;
+    min-height: 136px;
   }
 }
 
@@ -267,19 +302,17 @@
 }
 
 .filter {
-  margin-right: 0;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin-right: 3.5rem;
+  margin-left: -2.5rem;
+  margin-right: 3rem;
 
-   @media (max-width: $tablet-width) {
-     position: absolute;
-     top: 0;
-     left: 0;
-     background-color: white;
-     z-index: 10;
-     width: 100%;
-     height: 100%;
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
   }
 
   @media (max-width: $mobile-width) {
@@ -287,10 +320,24 @@
   }
 }
 
+.filter--opened {
+  @media (max-width: $tablet-width) {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 50%;
+    box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24);
+    transform: translate(-50%, 00%);
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+}
+
 .filter form {
   @media (max-width: $tablet-width) {
     position: relative;
-    max-width: 412px;
+    max-width: 465px;
   }
 }
 
@@ -307,27 +354,30 @@
   text-align: left;
 
   @media (max-width: $tablet-width) {
-    width: 100%;
     border: none;
+    width: 43rem;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     width: 280px;
   }
 }
 
 .filter-item {
+  min-height: 73px;
   border-bottom: 1px solid $primary;
+  margin-bottom: 0;
 }
 
 .filter-item__content {
-  margin-left: 5rem;
+  margin-left: 4rem;
   background-color: white;
   max-height: 0;
   max-width: 52rem;
   text-align: left;
   opacity: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 0;
+  margin-top: -17px;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
 
@@ -337,33 +387,33 @@
 }
 
 .filter-item__trigger {
-
   font-family: "Poppins", "Arial", sans-serif;
   display: block;
   color: $text-black;
   cursor: pointer;
   padding-top: 3rem;
   padding-left: 4rem;
-  padding-bottom: 0;
+  padding-bottom: 4rem;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
   font-size: 15px;
   transition: 0.4s;
-  background-color: white;
+  background-color: transparent;
   position: relative;
+  height: 67px;
 
   @media (max-width: $tablet-width) {
     padding-left: 0;
     height: 92px;
-    padding-top: 0;
+    padding-top: 1rem;
   }
 
   @media (max-width: $mobile-width) {
     height: 72px;
   }
-  }
+}
 
 .filter-item__trigger::after {
   position: absolute;
@@ -375,13 +425,13 @@
   height: 16px;
   font-size: 18px;
   float: right;
-  margin-right: 4.5rem;
-  top: 65%;
+  margin-right: 2.5rem;
+  top: 45%;
 
   @media (max-width: $tablet-width) {
     position: absolute;
-    right: 40px;
-    top: 5rem;
+    right: 35px;
+    top: 4rem;
     width: 25px;
     height: 10px;
     margin-right: 0;
@@ -392,18 +442,24 @@
   padding-left: 2rem;
 
   @media (max-width: $tablet-width) {
-    padding-left: 5rem;
+    padding-left: 7rem;
   }
 
   @media (max-width: $mobile-width) {
-     padding-left: 6.5rem;
+    padding-left: 6.5rem;
   }
 }
 
 .filter__input {
   position: absolute;
   appearance: none;
+}
 
+.card .slick-track {
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 // Checked
@@ -417,24 +473,26 @@
   opacity: 0.5;
 }
 
-.filter-item h2 {
+.filter-item b {
   font-size: 16px;
   line-height: 130%;
   font-family: "Poppins", "Arial", sans-serif;
-  margin-left: 1rem;
-  margin-top: 2.5rem;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-left: -1rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0;
 
   @media (max-width: $tablet-width) {
     font-size: 18px;
     padding-left: 0;
-    margin-top: 4rem;
+    padding-top: 3rem;
+    margin-left: 3rem;
   }
 
   @media (max-width: $mobile-width) {
     margin-left: 2.5rem;
     margin-top: 1rem;
+    padding-top: 1rem;
   }
 }
 
@@ -443,6 +501,10 @@
   padding-left: 0;
   margin-bottom: 2rem;
 
+  @media (max-width: $tablet-width) {
+    margin-bottom: 4rem;
+  }
+
   @media (max-width: $mobile-width) {
     margin-top: 0;
     margin-bottom: 3rem;
@@ -450,7 +512,7 @@
 }
 
 .filter-item li {
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
   font-family: "Poppins", "Arial", sans-serif;
   font-size: 14px;
   line-height: 130%;
@@ -458,7 +520,6 @@
   @media (max-width: $tablet-width) {
     margin-bottom: 2rem;
   }
-
 }
 
 .checkbox {
@@ -466,12 +527,11 @@
   width: 16px;
   height: 15px;
   background-image: url(".././img/off.svg");
-  margin-left: -2rem;
+  margin-left: -2.5rem;
 
   @media (max-width: $tablet-width) {
     margin-left: -3rem;
   }
-
 }
 
 .active1::after {
@@ -484,19 +544,24 @@
   float: right;
   margin-left: 4px;
   margin-top: 1rem;
+  top: 30%;
 
-   @media (max-width: $tablet-width) {
-     position: absolute;
-     right: 40px;
-     top: 5rem;
-     width: 25px;
-     height: 10px;
-     margin-right: 0;
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    right: 35px;
+    top: 5rem;
+    width: 25px;
+    height: 10px;
+    margin-right: 0;
   }
 
-   @media (max-width: $mobile-width) {
-     top: 2rem;
+  @media (max-width: $mobile-width) {
+    top: 2rem;
   }
+}
+
+.filter__buttons {
+  margin-left: 0;
 }
 
 .filter__buttons button[type="submit"] {
@@ -506,7 +571,7 @@
   width: 250px;
   height: 68px;
   background-color: $primary;
-  margin-top: 3.5rem;
+  margin-top: 4.5rem;
   margin-bottom: 2.5rem;
   color: white;
   font-size: 16px;
@@ -519,12 +584,18 @@
   @media (max-width: $mobile-width) {
     width: 230px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: white;
+    border: 1px solid $primary;
+    color: $text-black;
+  }
 }
 
 .filter__buttons button[type="reset"] {
   font-family: "Poppins", "Arial", sans-serif;
   outline: none;
-  border: none;
   width: 250px;
   height: 68px;
   background-color: transparent;
@@ -540,7 +611,14 @@
   @media (max-width: $mobile-width) {
     width: 230px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    color: white;
+  }
 }
+
 
 .slider--catalog ol {
   display: flex;
@@ -555,7 +633,7 @@
 
 .slider--catalog li {
   margin-right: 1.5rem;
-  color: #9B9997;
+  color: #9b9997;
 }
 
 .slider--catalog li:first-child {
@@ -572,7 +650,12 @@
   grid-column: 1 / 4;
 
   @media (max-width: $tablet-width) {
-   display: block;
+    margin-top: 4rem;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    margin-top: 0;
   }
 }
 
@@ -582,46 +665,89 @@
   font-size: 16px;
   line-height: 130%;
 
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.range-filter {
+  margin-left: 1rem;
+  margin-top: -1rem;
+  margin-bottom: 5rem;
+
   @media (max-width: $tablet-width) {
-   display: none;
+    z-index: 10;
+    margin-left: 9rem;
+  }
+
+  @media (max-width: $mobile-width) {
+    z-index: 10;
+    margin-left: 3rem;
   }
 }
 
 .range-controls {
-    position: relative;
-    margin-bottom: 15px;
-    padding-top: 20px;
-    padding-right: 0px;
-    padding-left: 0px;
-    border-radius: 5px;
+  position: relative;
+  margin-bottom: 35px;
+  padding-top: 15px;
+  padding-right: 0;
+  padding-left: 0;
+  border-radius: 5px;
 }
 
 .range-controls .scale {
-    height: 2px;
-    width: 9rem;
-    background-color: rgba(000, 000, 000, 0.3);
+  height: 2px;
+  width: 12rem;
+  background-color: #a87b62;
+
+  @media (max-width: $tablet-width) {
+    width: 18rem;
+    z-index: 10;
+  }
 }
 
 .range-controls .toggle {
-    position: absolute;
-    top: 10px;
-    left: 0px;
-    width: 19px;
-    height: 19px;
-    padding: 0;
-    border: 8px solid var(--basic-white);
-    background-color: $primary;
-    border-radius: 50%;
-    box-shadow: 0 2px 1px 0 var(box-shadow-toggle);
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: $primary;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(box-shadow-toggle);
+  cursor: pointer;
 }
 
 .range-controls .toggle-min {
-    left: 0px;
+  left: 0;
 }
 
 .range-controls .toggle-max {
-    left: 100px;
+  left: 110px;
+
+  @media (max-width: $tablet-width) {
+    left: 170px;
+  }
+}
+
+.toggle p {
+  position: absolute;
+  white-space: nowrap;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.toggle-min p {
+  left: -5px;
+  top: 8px;
+}
+
+.toggle-max p {
+  right: -10px;
+  top: 9px;
 }
 
 .filter__close {
@@ -632,7 +758,6 @@
     position: absolute;
     right: 0;
     z-index: 1000;
-    background-color: $white;
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -640,6 +765,7 @@
     background-image: url(".././img/cross.svg");
     background-repeat: no-repeat;
     background-position: 7px 7px;
+    margin-right: 1rem;
   }
 }
 
@@ -677,18 +803,17 @@
 }
 
 .slider--card .slider__item {
-
   @media (max-width: $tablet-width) {
     margin-top: 5rem;
   }
 }
 
 .slider__wrapper--card img {
-
   @media (max-width: $tablet-width) {
     min-height: 340px;
     max-width: 324px;
   }
+
   @media (max-width: $mobile-width) {
     margin: 0 auto;
     object-fit: fill;
@@ -697,13 +822,12 @@
 }
 
 .slider--card {
-
   @media (max-width: $tablet-width) {
     max-width: 710px;
   }
 }
 
-.slider--card .slick-dots  {
+.slider--card .slick-dots {
   margin-top: 1.7rem;
   height: 12px;
 }
@@ -724,7 +848,7 @@
   }
 }
 
-.product__number {
+.number {
   display: none;
 
   @media (max-width: $mobile-width) {
@@ -732,16 +856,5 @@
     font-family: "Poppins", "Arial", sans-serif;
     font-size: 16px;
     line-height: 130%;
-  }
-}
-
-.slider .slick-dots button {
-   @media (max-width: $tablet-width) {
-    font-family: "Poppins", "Arial", sans-serif;
-    color: #000;
-    opacity: 0.5;
-    font-size: 16px;
-    width: 16px;
-    margin-right: .6rem;
   }
 }
