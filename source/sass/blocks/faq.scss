@@ -141,7 +141,7 @@
   @media (max-width: $mobile-width) {
     position: absolute;
     right: 18px;
-    top: 2rem;
+    top: 3rem;
     width: 25px;
     height: 10px;
     margin-right: 0;
@@ -172,7 +172,7 @@
   @media (max-width: $mobile-width) {
     position: absolute;
     right: 18px;
-    top: 1rem;
+    top: 2rem;
     width: 25px;
     height: 10px;
     margin-right: 0;
@@ -195,6 +195,8 @@
   @media (max-width: $mobile-width) {
     font-weight: 400;
     font-size: 16px;
+    line-height: 140%;
+    display: block;
     max-width: 78%;
     margin-top: 0;
     margin-bottom: 0;

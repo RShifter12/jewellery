@@ -217,6 +217,7 @@
   max-width: 1190px;
   padding-right: 1rem;
   padding-left: 1rem;
+  margin-bottom: 6rem;
 
   @media (max-width: $tablet-width) {
     display: block;
@@ -648,6 +649,7 @@
   text-align: center;
   justify-content: space-between;
   grid-column: 1 / 4;
+  margin-top: 4rem;
 
   @media (max-width: $tablet-width) {
     margin-top: 4rem;

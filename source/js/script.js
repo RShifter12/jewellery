@@ -1,61 +1,59 @@
 'use strict';
 var $jq = jQuery.noConflict();
-var slide = $jq(".slider--catalog").html();
+var slide = $jq('.slider--catalog').html();
 if (!slide) {
-  $jq(document).ready(function() {
-  $jq('.slider').slick({
-    arrows: true,
-    dots: true,
-    adaptiveHeight: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    speed: 100,
-    cssEase: 'linear',
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          dots: false,
-          arrows: false,
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      }
-    ]
-  });
-});
-}
-
-var slideCard = $jq(".card__images").html();
-if (slideCard) {
-  $jq(window).on('load resize', function() {
-  if ($jq(window).width() < 767) {
-    $jq('.card__images').slick({
-      arrows: false,
-      dots: false,
+  $jq(document).ready(function () {
+    $jq('.slider').slick({
+      arrows: true,
+      dots: true,
       adaptiveHeight: true,
-      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 4,
       speed: 100,
-      slidesToShow: 1,
-      cssEase: 'linear'
+      cssEase: 'linear',
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            dots: false,
+            arrows: false,
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        }
+      ]
     });
-  } else {
-    $jq('.card__images').slick("unslick");
-  }
-});
+  });
 }
 
 
-//modalLog
+if ($jq('.card__images').length) {
+  $jq(window).on('load resize', function () {
+    if ($jq(window).width() < 767) {
+      $jq('.card__images').slick({
+        arrows: false,
+        dots: false,
+        adaptiveHeight: true,
+        infinite: true,
+        speed: 100,
+        slidesToShow: 1,
+        cssEase: 'linear'
+      });
+    } else {
+      $jq('.card__images').slick('unslick');
+    }
+  });
+}
+
+//  modalLog
 var modalLogin = document.querySelector('.modal--login');
-var modal = document.querySelector('.modal');
 var logIn = document.querySelector('.login');
 var email = document.querySelector('#modal__email');
 var freezeScroll = document.querySelector('html');
@@ -131,28 +129,28 @@ var filterToggle = document.querySelector('.filter-toggle');
 
 if (filterToggle) {
   filterToggle.addEventListener('click', function () {
-  if (filter.classList.contains('filter--closed')) {
-    filter.classList.remove('filter--closed');
-    filter.classList.add('filter--opened');
-  } else {
-    filter.classList.add('filter--closed');
-    filter.classList.remove('filter--opened');
-  }
-});
+    if (filter.classList.contains('filter--closed')) {
+      filter.classList.remove('filter--closed');
+      filter.classList.add('filter--opened');
+    } else {
+      filter.classList.add('filter--closed');
+      filter.classList.remove('filter--opened');
+    }
+  });
 }
 
 var filterClose = document.querySelector('.filter__close');
 
 if (filterClose) {
   filterClose.addEventListener('click', function () {
-  if (filter.classList.contains('filter--opened')) {
-    filter.classList.remove('filter--opened');
-    filter.classList.add('filter--closed');
-  } else {
-    filter.classList.add('filter--opened');
-    filter.classList.remove('filter--closed');
-  }
-});
+    if (filter.classList.contains('filter--opened')) {
+      filter.classList.remove('filter--opened');
+      filter.classList.add('filter--closed');
+    } else {
+      filter.classList.add('filter--opened');
+      filter.classList.remove('filter--closed');
+    }
+  });
 }
 
 var filterBtn = document.querySelectorAll('.filter-item__trigger');
@@ -172,7 +170,7 @@ for (var j = 0; j < filterBtn.length; j++) {
   });
 }
 
-//modalCard
+//  modalCard
 
 var modalCard = document.querySelector('.modal--card');
 
@@ -192,10 +190,9 @@ var addToCart = document.querySelector('.card__button');
 
 if (addToCart) {
   addToCart.addEventListener('click', function () {
-  openCard();
-});
-};
-
+    openCard();
+  });
+}
 
 var onPopupEscPress = function (evt) {
   if (evt.keyCode === 27) {
@@ -207,15 +204,15 @@ var cardClose = document.querySelector('.modal__close--card');
 
 if (cardClose) {
   cardClose.addEventListener('click', function () {
-  closeCard();
-});
+    closeCard();
+  });
 
   cardClose.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 13) {
-    closeCard();
-    closeLogin();
-  }
-});
+    if (evt.keyCode === 13) {
+      closeCard();
+      closeLogin();
+    }
+  });
 }
 
 
