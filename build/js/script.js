@@ -33,7 +33,6 @@ if (!slide) {
   });
 }
 
-
 if ($jq('.card__images').length) {
   $jq(window).on('load resize', function () {
     if ($jq(window).width() < 767) {
@@ -132,9 +131,12 @@ if (filterToggle) {
     if (filter.classList.contains('filter--closed')) {
       filter.classList.remove('filter--closed');
       filter.classList.add('filter--opened');
+      document.addEventListener('keydown', onPopupEscPress);
+
     } else {
       filter.classList.add('filter--closed');
       filter.classList.remove('filter--opened');
+      document.removeEventListener('keydown', onPopupEscPress);
     }
   });
 }
@@ -146,6 +148,7 @@ if (filterClose) {
     if (filter.classList.contains('filter--opened')) {
       filter.classList.remove('filter--opened');
       filter.classList.add('filter--closed');
+
     } else {
       filter.classList.add('filter--opened');
       filter.classList.remove('filter--closed');
@@ -182,7 +185,9 @@ var openCard = function () {
 
 var closeCard = function () {
   freezeScroll.style.overflow = 'visible';
-  modalCard.classList.add('modal--hidden');
+  if (modalCard){
+    modalCard.classList.add('modal--hidden');
+  }
   document.removeEventListener('keydown', onPopupEscPress);
 };
 
@@ -198,6 +203,9 @@ var onPopupEscPress = function (evt) {
   if (evt.keyCode === 27) {
     closeCard();
     closeLogin();
+    if (filter) {
+      filter.classList.add('filter--closed');
+    }
   }
 };
 var cardClose = document.querySelector('.modal__close--card');
@@ -210,7 +218,6 @@ if (cardClose) {
   cardClose.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 13) {
       closeCard();
-      closeLogin();
     }
   });
 }

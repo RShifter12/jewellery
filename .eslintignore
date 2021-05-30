@@ -1,5 +1,5 @@
 
-build/js/slick.min.js
-source/js/slick.min.js
+build/js/vendor.js
+source/js/vendor.js
 build/js/script.js
 source/js/script.js

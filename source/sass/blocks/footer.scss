@@ -221,6 +221,7 @@
 .footer__contacts svg {
   fill: white;
   margin-right: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 .footer__contacts li {
@@ -238,6 +239,7 @@
 .footer__contacts p {
   display: inline-block;
   margin: 0;
+  vertical-align: text-top;
 
   @media (max-width: $mobile-width) {
     display: none;

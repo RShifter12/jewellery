@@ -337,8 +337,7 @@
 }
 
 
-.modal--card .modal__buttons a:first-child {
-
+.modal__buttons a:first-child {
   background-color: white;
   border: 1px solid $primary;
   color: $text-black;
@@ -354,7 +353,7 @@
   }
 }
 
-.modal--card .modal__buttons a {
+.modal__buttons a {
   white-space: nowrap;
   width: 200px;
   padding-top: 2.5rem;

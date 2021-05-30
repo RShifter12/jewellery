@@ -146,11 +146,6 @@
   }
 }
 
-
-.header--opened .header__left svg {
-  fill: white;
-}
-
 .header__center svg {
   @media (max-width: $mobile-width) {
     height: 52px;
@@ -173,12 +168,6 @@
 
   @media (max-width: $mobile-width) {
     margin-top: 2rem;
-  }
-}
-
-.header--opened .header__center svg {
-  @media (max-width: $tablet-width) {
-    fill: $white;
   }
 }
 
@@ -226,12 +215,14 @@
     text-align: end;
     fill: none;
     stroke: black;
+    vertical-align: top;
   }
 }
 
-.header--opened .header__right svg {
+.header--opened svg {
   @media (max-width: $tablet-width) {
     stroke: $white;
+    fill: none;
   }
 }
 
