@@ -194,10 +194,12 @@
   overflow: hidden;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  column-gap: 3rem;
+  margin: 0 auto;
 
   @media (max-width: $tablet-width) {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -778,7 +780,9 @@
 .products--card {
   margin-top: 11rem;
   margin-bottom: 14rem;
-  max-width: 1180px;
+  max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   @media (max-width: $tablet-width) {
     margin-top: 6rem;

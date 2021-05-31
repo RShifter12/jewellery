@@ -37,7 +37,7 @@
   line-height: 130%;
 }
 
-.modal--login .modal__wrapper input {
+.modal__wrapper--login input {
   width: 100%;
   outline: none;
   border: none;
@@ -59,7 +59,7 @@
   }
 }
 
-.modal--login .modal__form a {
+.modal__form a {
   font-family: "Poppins", "Arial", sans-serif;
   text-align: right;
   display: block;
@@ -81,7 +81,7 @@
 }
 
 
-.modal--login .modal__wrapper button {
+.modal__wrapper--login button {
   width: 340px;
   height: 68px;
   background-color: $primary;
@@ -108,11 +108,11 @@
   display: flex;
 }
 
-.modal--login .modal__signup p {
+.modal__signup p {
   color: #9b9997;
 }
 
-.modal--login .modal__signup a {
+.modal__signup a {
   height: 100%;
   align-self: center;
   margin-left: 1rem;
@@ -313,7 +313,7 @@
   }
 }
 
-.modal--card .modal__sum p {
+.modal__sum p {
   font-family: "Poppins", "Arial", sans-serif;
   font-size: 14px;
   line-height: 130%;
