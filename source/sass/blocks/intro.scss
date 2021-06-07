@@ -1,13 +1,11 @@
 .intro {
   background-color: $primary;
-  background-image: url(".././img/intro1x.jpg");
+  background-image: url(".././img/intro.jpg");
   background-repeat: no-repeat;
   height: 463px;
   width: 100%;
-  object-fit: cover;
   background-size: 100% 100%;
   display: grid;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .intro h1 {
@@ -58,6 +56,12 @@
   background-size: 100% 100%;
   display: grid;
   grid-template-rows: 1.1fr 1fr;
+
+  @media (max-width: $mobile-width) {
+    grid-template-rows: 0.9fr 1fr;
+
+  }
+
 }
 
 .intro--catalog h1 {

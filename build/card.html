@@ -2,25 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Discover picks of fashion's finest trends in our jewellery catalog">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Jewellery</title>
-      <link rel="stylesheet" href="css/style.min.css">
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff" as="font" crossorigin="">
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff2" as="font" crossorigin="">
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff" as="font" crossorigin="">
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff2" as="font" crossorigin="">
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff" as="font" crossorigin="">
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff2" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-300.woff" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-300.woff2" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-regular.woff" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-500.woff" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-700.woff" as="font" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover picks of fashion's finest trends in our jewellery catalog">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jewellery</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff" type="font/woff" as="font" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff" as="font" type="font/woff" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff" as="font" type="font/woff" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff" as="font" type="font/woff" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff" as="font" type="font/woff" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff" as="font" type="font/woff" crossorigin="">
   </head>
   <body>
     <div class="content">
@@ -28,11 +26,13 @@
         <button class="btn header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="header__content">
           <div class="header__left">
-            <svg width="14" height="14">
-              <use href="sprite.svg#search"></use>
-            </svg>
-            <label class="visually-hidden" for="search">Search</label>
-            <input type="search" id="search" name="search" placeholder="Type here to search">
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <svg width="14" height="14">
+                <use href="sprite.svg#search"></use>
+              </svg>
+              <label class="visually-hidden" for="search">Search</label>
+              <input type="search" id="search" name="search" placeholder="Type here to search">
+            </form>
           </div>
           <div class="header__center">
             <a href="index.html">
@@ -62,28 +62,28 @@
           <a href="#">Contact Us</a>
         </div>
         <div class="nav-tablet">
-          <a href="modal.html" class="login login--nojs">Login</a>
+          <a href="modal.html" class="login login--tablet login--nojs">Login</a>
         </div>
       </header>
       <main class="main">
         <section class="card">
           <div class="card__images">
-            <div class="card__image">
-              <picture>
-                <source type="image/webp" srcset="img/gold-necklace-for-women1x.webp 1x, img/gold-necklace-for-women2x.webp 2x">
-                  <!-- 1x:100 2x:200 -->
-                  <img src="img/gold-necklace-for-women1x.jpg" srcset="img/gold-necklace-for-women2x.jpg 2x" width="100" height="125" alt="Necklace with amethyst">
-                </picture>
-                <div class="card__number">
-              <p>1 of 4</p>
-            </div>
-            </div>
             <div class="card__image card__image--big">
               <picture>
                 <source type="image/webp" srcset="img/necklace-detail1x.webp 1x, img/necklace-detail2x.webp 2x">
                 <!-- 1x:470 2x:940 -->
                 <img src="img/necklace-detail1x.jpg" srcset="img/necklace-detail2x.jpg 2x" width="470" height="435" alt="Necklace with amethyst">
               </picture>
+                <div class="card__number">
+              <p>1 of 4</p>
+            </div>
+            </div>
+            <div class="card__image">
+              <picture>
+                <source type="image/webp" srcset="img/gold-necklace-for-women1x.webp 1x, img/gold-necklace-for-women2x.webp 2x">
+                  <!-- 1x:100 2x:200 -->
+                  <img src="img/gold-necklace-for-women1x.jpg" srcset="img/gold-necklace-for-women2x.jpg 2x" width="100" height="125" alt="Necklace with amethyst">
+                </picture>
             </div>
             <div class="card__image">
               <picture>
@@ -421,19 +421,19 @@
         <div class="modal__image">
           <picture>
             <source type="image/webp" srcset="img/modal-login1x.webp 1x, img/modal-login2x.webp 2x">
-            <!-- 1x:430 2x:860 -->
+            <!-- 1x:342 2x:684 -->
             <img src="img/modal-login1x.jpg" srcset="img/modal-login2x.jpg 2x" width="430" height="138" alt="Gold Necklace">
           </picture>
         </div>
-        <div class="modal__wrapper">
+        <div class="modal__wrapper modal__wrapper--login">
           <h2>Log In</h2>
           <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
             <label class="visually-hidden" for="modal__email">имя</label>
-            <input type="email" id="modal__email" name="email" placeholder="Your E-mail" required="" tabindex="1">
+            <input type="email" id="modal__email" name="email" minlength="1" placeholder="Your E-mail" tabindex="1" required="">
             <label class="visually-hidden" for="modal__password">имя</label>
-            <input type="password" id="modal__password" name="password" placeholder="Password" required="" tabindex="2">
+            <input type="password" id="modal__password" name="password" minlength="1" placeholder="Password" tabindex="2" required="">
             <a href="#" tabindex="3">Forgot your password?</a>
-            <button type="button" class="btn" tabindex="4">Log In</button>
+            <button type="submit" class="btn" tabindex="4">Log In</button>
           </form>
           <div class="modal__signup">
             <p>Don’t have an account?</p>

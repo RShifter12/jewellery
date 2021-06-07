@@ -2,25 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Discover picks of fashion's finest trends in our jewellery catalog">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Jewellery</title>
-      <link rel="stylesheet" href="css/style.min.css">
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff" as="font" crossorigin="">
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff2" as="font" crossorigin="">
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff" as="font" crossorigin="">
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff2" as="font" crossorigin="">
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff" as="font" crossorigin="">
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff2" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-300.woff" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-300.woff2" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-regular.woff" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-500.woff" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" crossorigin="">
-      <link rel="preload" href="fonts/poppins-v15-latin-700.woff" as="font" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover picks of fashion's finest trends in our jewellery catalog">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jewellery</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff" type="font/woff" as="font" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff" as="font" type="font/woff" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff" as="font" type="font/woff" crossorigin="">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff" as="font" type="font/woff" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff" as="font" type="font/woff" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff" as="font" type="font/woff" crossorigin="">
   </head>
   <body>
     <div class="content">
@@ -28,11 +26,13 @@
         <button class="btn header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="header__content">
           <div class="header__left">
-            <svg width="14" height="14">
-              <use href="sprite.svg#search"></use>
-            </svg>
-            <label class="visually-hidden" for="search">Search</label>
-            <input type="search" id="search" name="search" placeholder="Type here to search">
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <svg width="14" height="14">
+                <use href="sprite.svg#search"></use>
+              </svg>
+              <label class="visually-hidden" for="search">Search</label>
+              <input type="search" id="search" name="search" placeholder="Type here to search">
+            </form>
           </div>
           <div class="header__center">
             <a href="index.html">
@@ -62,7 +62,7 @@
           <a href="#">Contact Us</a>
         </div>
         <div class="nav-tablet">
-          <a href="#" class="login">Login</a>
+          <a href="modal.html" class="login login--tablet login--nojs">Login</a>
         </div>
       </header>
       <main class="main">
@@ -72,7 +72,7 @@
         </section>
         <section class="products products--catalog">
         <button type="button" class="btn filter-toggle">Filter</button>
-          <aside class="filter filter--closed">
+          <aside class="filter filter--closed filter--nojs">
             <form action="https://echo.htmlacademy.ru" method="get">
               <button type="button" class="btn filter__close"><span class="visually-hidden">закрыть меню</span></button>
               <div class="filter__content">
@@ -80,7 +80,7 @@
                   <button type="button" class="btn filter-item__trigger">
                   <b>Product</b>
                   </button>
-                  <div class="filter-item__content">
+                  <div class="filter-item__content filter-item__content--nojs">
                     <ul>
                       <li>
                         <label>
@@ -117,7 +117,7 @@
                   <button type="button" class="btn filter-item__trigger">
                   <b>Material</b>
                   </button>
-                  <div class="filter-item__content">
+                  <div class="filter-item__content filter-item__content--nojs">
                     <ul>
                       <li>
                         <label>
@@ -140,7 +140,7 @@
                   <button type="button" class="btn filter-item__trigger">
                     <b>Collection</b>
                   </button>
-                  <div class="filter-item__content">
+                  <div class="filter-item__content filter-item__content--nojs">
                     <ul>
                       <li>
                         <label>
@@ -162,7 +162,7 @@
                 <div class="filter-item">
                   <button type="button" class="btn filter-item__trigger">
                   <b>Price</b></button>
-                  <div class="filter-item__content">
+                  <div class="filter-item__content filter-item__content--nojs">
                     <div class="range-filter">
                       <div class="range-controls">
                         <div class="scale"></div>
@@ -188,71 +188,6 @@
               <a href="#">
                 <div class="slider__wrapper slider__wrapper--catalog">
                   <picture>
-                    <source type="image/webp" srcset="img/necklace1x.webp 1x, img/necklace2x.webp 2x">
-                    <!-- 1x:270 2x:540 -->
-                    <img src="img/necklace1x.jpg" srcset="img/necklace2x.jpg 2x" width="270" height="272" alt="Necklace with amethyst">
-                  </picture>
-                </div>
-                <h3>Necklace with amethyst</h3>
-                <p>$ 145</p>
-              </a>
-            </div>
-            <div class="slider__item">
-              <a href="#">
-                <div class="slider__wrapper slider__wrapper--catalog">
-                  <picture>
-                    <source type="image/webp" srcset="img/choker1x.webp 1x, img/choker2x.webp 2x">
-                    <!-- 1x:270 2x:540 -->
-                    <img src="img/choker1x.jpg" srcset="img/choker2x.jpg 2x" width="270" height="272" alt="Layered сhoker">
-                    </picture>
-                </div>
-                <h3>Layered сhoker</h3>
-                <p>$ 115</p>
-              </a>
-            </div>
-            <div class="slider__item">
-              <a href="#">
-                <div class="slider__wrapper slider__wrapper--catalog">
-                  <picture>
-                    <source type="image/webp" srcset="img/chain1x.webp 1x, img/chain2x.webp 2x">
-                    <!-- 1x:270 2x:540 -->
-                    <img src="img/chain1x.jpg" srcset="img/chain2x.jpg 2x" width="270" height="272" alt="chain">
-                    </picture>
-                </div>
-                <h3>Gold chain</h3>
-                <p>$ 215</p>
-              </a>
-            </div>
-            <div class="slider__item">
-              <a href="#">
-                <div class="slider__wrapper slider__wrapper--catalog">
-                  <picture>
-                    <source type="image/webp" srcset="img/rings1x.webp 1x, img/rings2x.webp 2x">
-                    <!-- 1x:270 2x:540 -->
-                    <img src="img/rings1x.jpg" srcset="img/rings2x.jpg 2x" width="270" height="272" alt="Galaxy earrings">
-                  </picture>
-                </div>
-                <h3>Galaxy earrings</h3>
-                <p>$ 95</p>
-              </a>
-            </div>
-            <div class="slider__item">
-              <a href="#">
-                <div class="slider__wrapper slider__wrapper--catalog">
-                  <picture>
-                    <source type="image/webp" srcset="img/pretty-gold-necklace1x.webp 1x, img/pretty-gold-necklace2x.webp 2x">
-                    <!-- 1x:270 2x:540 -->
-                    <img src="img/pretty-gold-necklace1x.jpg" srcset="img/pretty-gold-necklace2x.jpg 2x" width="270" height="272" alt="Gold chain">
-                  </picture>
-                </div>
-                <h3>Gold Necklace </h3>
-                <p>$ 115</p>
-              </a>
-            </div>
-            <div class="slider__item">
-              <a href="#">
-                <div class="slider__wrapper slider__wrapper--catalog">
-                  <picture>
                     <source type="image/webp" srcset="img/pearl1x.webp 1x, img/pearl2x.webp 2x">
                     <!-- 1x:270 2x:540 -->
                     <img src="img/pearl1x.jpg" srcset="img/pearl2x.jpg 2x" width="270" height="272" alt="Gold Necklace">
@@ -266,13 +201,117 @@
               <a href="#">
                 <div class="slider__wrapper slider__wrapper--catalog">
                   <picture>
+                    <source type="image/webp" srcset="img/black-choker1x.webp 1x, img/black-choker2x.webp 2x">
+                    <!-- 1x:270 2x:540 -->
+                    <img src="img/black-choker1x.jpg" srcset="img/black-choker2x.jpg 2x" width="270" height="272" alt="Layered сhoker">
+                    </picture>
+                </div>
+                <h3>Choker with gold bead</h3>
+                <p>$ 55</p>
+              </a>
+            </div>
+            <div class="slider__item">
+              <a href="#">
+                <div class="slider__wrapper slider__wrapper--catalog">
+                  <picture>
                     <source type="image/webp" srcset="img/gold-necklace1x.webp 1x, img/gold-necklace2x.webp 2x">
                     <!-- 1x:270 2x:540 -->
                     <img src="img/gold-necklace1x.jpg" srcset="img/gold-necklace2x.jpg 2x" width="270" height="272" alt="Gold chain">
                   </picture>
                 </div>
-                <h3>Gold chain</h3>
-                <p>$ 215</p>
+                <h3>Gold layered necklace</h3>
+                <p>$ 155</p>
+              </a>
+            </div>
+            <div class="slider__item">
+              <a href="#">
+                <div class="slider__wrapper slider__wrapper--catalog">
+                  <picture>
+                    <source type="image/webp" srcset="img/blue-gemstone1x.webp 1x, img/blue-gemstone2x.webp 2x">
+                    <!-- 1x:270 2x:540 -->
+                    <img src="img/blue-gemstone1x.jpg" srcset="img/blue-gemstone2x.jpg 2x" width="270" height="272" alt="blue-gemstone">
+                    </picture>
+                </div>
+                <h3>Blue gemstone pendant</h3>
+                <p>$ 105</p>
+              </a>
+            </div>
+            <div class="slider__item">
+              <a href="#">
+                <div class="slider__wrapper slider__wrapper--catalog">
+                  <picture>
+                    <source type="image/webp" srcset="img/boho-earrings1x.webp 1x, img/boho-earrings2x.webp 2x">
+                    <!-- 1x:270 2x:540 -->
+                    <img src="img/boho-earrings1x.jpg" srcset="img/boho-earrings2x.jpg 2x" width="270" height="272" alt="Galaxy earrings">
+                  </picture>
+                </div>
+                <h3>Boho earrings</h3>
+                <p>$ 75</p>
+              </a>
+            </div>
+            <div class="slider__item">
+              <a href="#">
+                <div class="slider__wrapper slider__wrapper--catalog">
+                  <picture>
+                    <source type="image/webp" srcset="img/bird-necklace1x.webp 1x, img/bird-necklace2x.webp 2x">
+                    <!-- 1x:270 2x:540 -->
+                    <img src="img/bird-necklace1x.jpg" srcset="img/bird-necklace2x.jpg 2x" width="270" height="272" alt="Gold chain">
+                  </picture>
+                </div>
+                <h3>Gold bird necklace</h3>
+                <p>$ 135</p>
+              </a>
+            </div>
+            <div class="slider__item">
+              <a href="#">
+                <div class="slider__wrapper slider__wrapper--catalog">
+                  <picture>
+                    <source type="image/webp" srcset="img/black-leather-choker1x.webp 1x, img/black-leather-choker2x.webp 2x">
+                    <!-- 1x:270 2x:540 -->
+                    <img src="img/black-leather-choker1x.jpg" srcset="img/black-leather-choker2x.jpg 2x" width="270" height="272" alt="Gold Necklace">
+                  </picture>
+                </div>
+                <h3>Black leather choker</h3>
+                <p>$ 85</p>
+              </a>
+            </div>
+            <div class="slider__item">
+              <a href="#">
+                <div class="slider__wrapper slider__wrapper--catalog">
+                  <picture>
+                    <source type="image/webp" srcset="img/necklace1x.webp 1x, img/necklace2x.webp 2x">
+                    <!-- 1x:270 2x:540 -->
+                    <img src="img/necklace1x.jpg" srcset="img/necklace2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
+                  </picture>
+                </div>
+                <h3>Necklace with amethyst</h3>
+                <p>$ 145</p>
+              </a>
+            </div>
+            <div class="slider__item">
+              <a href="#">
+                <div class="slider__wrapper slider__wrapper--catalog">
+                  <picture>
+                    <source type="image/webp" srcset="img/elephant-earrings1x.webp 1x, img/elephant-earrings2x.webp 2x">
+                    <!-- 1x:270 2x:540 -->
+                    <img src="img/elephant-earrings1x.jpg" srcset="img/elephant-earrings2x.jpg 2x" width="270" height="272" alt="Gold chain">
+                  </picture>
+                </div>
+                <h3>Elephant earrings</h3>
+                <p>$ 95</p>
+              </a>
+            </div>
+            <div class="slider__item">
+              <a href="#">
+                <div class="slider__wrapper slider__wrapper--catalog">
+                  <picture>
+                    <source type="image/webp" srcset="img/threader-necklace-closeup1x.webp 1x, img/threader-necklace-closeup2x.webp 2x">
+                    <!-- 1x:270 2x:540 -->
+                    <img src="img/threader-necklace-closeup1x.jpg" srcset="img/threader-necklace-closeup2x.jpg 2x" width="270" height="272" alt="Gold chain">
+                  </picture>
+                </div>
+                <h3>Threader necklace</h3>
+                <p>$ 115</p>
               </a>
             </div>
             <div class="slider__item">
@@ -299,45 +338,6 @@
                 </div>
                 <h3>Marble earrings</h3>
                 <p>$ 95</p>
-              </a>
-            </div>
-            <div class="slider__item">
-              <a href="#">
-                <div class="slider__wrapper slider__wrapper--catalog">
-                  <picture>
-                    <source type="image/webp" srcset="img/gold-necklace1x.webp 1x, img/gold-necklace2x.webp 2x">
-                    <!-- 1x:270 2x:540 -->
-                    <img src="img/gold-necklace1x.jpg" srcset="img/gold-necklace2x.jpg 2x" width="270" height="272" alt="Gold chain">
-                  </picture>
-                </div>
-                <h3>Necklace with amethyst</h3>
-                <p>$ 145</p>
-              </a>
-            </div>
-            <div class="slider__item">
-              <a href="#">
-                <div class="slider__wrapper slider__wrapper--catalog">
-                  <picture>
-                    <source type="image/webp" srcset="img/necklace-detail1x.webp 1x, img/necklace-detail2x.webp 2x">
-                    <!-- 1x:270 2x:540 -->
-                    <img src="img/necklace-detail1x.jpg" srcset="img/necklace-detail2x.jpg 2x" width="270" height="272" alt="Gold chain">
-                  </picture>
-                </div>
-                <h3>Necklace with amethyst</h3>
-                <p>$ 145</p>
-              </a>
-            </div>
-            <div class="slider__item">
-              <a href="#">
-                <div class="slider__wrapper slider__wrapper--catalog">
-                  <picture>
-                    <source type="image/webp" srcset="img/threader-necklace-closeup1x.webp 1x, img/threader-necklace-closeup2x.webp 2x">
-                    <!-- 1x:270 2x:540 -->
-                    <img src="img/threader-necklace-closeup1x.jpg" srcset="img/threader-necklace-closeup2x.jpg 2x" width="270" height="272" alt="Gold chain">
-                  </picture>
-                </div>
-                <h3>Necklace with amethyst</h3>
-                <p>$ 145</p>
               </a>
             </div>
             <div class="slider__pages">
@@ -431,19 +431,19 @@
         <div class="modal__image">
           <picture>
             <source type="image/webp" srcset="img/modal-login1x.webp 1x, img/modal-login2x.webp 2x">
-            <!-- 1x:430 2x:860 -->
+            <!-- 1x:342 2x:684 -->
             <img src="img/modal-login1x.jpg" srcset="img/modal-login2x.jpg 2x" width="430" height="138" alt="Gold Necklace">
           </picture>
         </div>
-        <div class="modal__wrapper">
+        <div class="modal__wrapper modal__wrapper--login">
           <h2>Log In</h2>
           <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
             <label class="visually-hidden" for="modal__email">имя</label>
-            <input type="email" id="modal__email" name="email" placeholder="Your E-mail" required="" tabindex="1">
+            <input type="email" id="modal__email" name="email" minlength="1" placeholder="Your E-mail" tabindex="1" required="">
             <label class="visually-hidden" for="modal__password">имя</label>
-            <input type="password" id="modal__password" name="password" placeholder="Password" required="" tabindex="2">
+            <input type="password" id="modal__password" name="password" minlength="1" placeholder="Password" tabindex="2" required="">
             <a href="#" tabindex="3">Forgot your password?</a>
-            <button type="button" class="btn" tabindex="4">Log In</button>
+            <button type="submit" class="btn" tabindex="4">Log In</button>
           </form>
           <div class="modal__signup">
             <p>Don’t have an account?</p>

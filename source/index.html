@@ -2,25 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Discover picks of fashion's finest trends in our jewellery catalog">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Jewellery</title>
-      <link rel="stylesheet" href="css/style.min.css">
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff" as="font" crossorigin>
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff2" as="font" crossorigin>
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff" as="font" crossorigin>
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff2" as="font" crossorigin>
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff" as="font" crossorigin>
-      <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff2" as="font" crossorigin>
-      <link rel="preload" href="fonts/poppins-v15-latin-300.woff" as="font" crossorigin>
-      <link rel="preload" href="fonts/poppins-v15-latin-300.woff2" as="font" crossorigin>
-      <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" crossorigin>
-      <link rel="preload" href="fonts/poppins-v15-latin-regular.woff" as="font" crossorigin>
-      <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" crossorigin>
-      <link rel="preload" href="fonts/poppins-v15-latin-500.woff" as="font" crossorigin>
-      <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" crossorigin>
-      <link rel="preload" href="fonts/poppins-v15-latin-700.woff" as="font" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover picks of fashion's finest trends in our jewellery catalog">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jewellery</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff" type="font/woff" as="font" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff" as="font" type="font/woff" crossorigin>
   </head>
   <body>
     <div class="content">
@@ -28,17 +26,19 @@
         <button class="btn header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="header__content">
           <div class="header__left">
-            <svg width="14" height="14">
-              <use href="sprite.svg#search"></use>
-            </svg>
-            <label class="visually-hidden" for="search">Search</label>
-            <input type="search" id="search" name="search" placeholder="Type here to search">
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <svg width="14" height="14">
+                <use href="sprite.svg#search"></use>
+              </svg>
+              <label class="visually-hidden" for="search">Search</label>
+              <input type="search" id="search" name="search" placeholder="Type here to search">
+            </form>
           </div>
           <div class="header__center">
             <a>
-            <svg class="logo" width="66" height="66">
-              <use href="sprite.svg#logo"></use>
-            </svg>
+              <svg class="logo" width="66" height="66">
+                <use href="sprite.svg#logo"></use>
+              </svg>
             </a>
           </div>
           <div class="header__right">
@@ -231,9 +231,9 @@
               </a>
             </div>
           </div>
-          <div class="number">
-            <p>1 of 6</p>
-          </div>
+          <span class="number">
+<!--            <p>1 of 6</p>-->
+          </span>
         </section>
         <section class="blog">
           <h2>Blog</h2>
@@ -462,11 +462,11 @@
           <h2>Log In</h2>
           <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
             <label class="visually-hidden" for="modal__email">имя</label>
-            <input type="email" id="modal__email" name="email" placeholder="Your E-mail" required tabindex="1">
+            <input type="email" id="modal__email" name="email" minlength="1" placeholder="Your E-mail" tabindex="1" required>
             <label class="visually-hidden" for="modal__password">имя</label>
-            <input type="password" id="modal__password" name="password" placeholder="Password" required tabindex="2">
+            <input type="password" id="modal__password" name="password" minlength="1"  placeholder="Password" tabindex="2" required>
             <a href="#" tabindex="3">Forgot your password?</a>
-            <button type="button" class="btn" tabindex="4">Log In</button>
+            <button type="submit" class="btn" tabindex="4">Log In</button>
           </form>
           <div class="modal__signup">
             <p>Don’t have an account?</p>

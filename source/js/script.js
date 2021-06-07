@@ -1,6 +1,14 @@
 'use strict';
 var $jq = jQuery.noConflict();
 var slide = $jq('.slider--catalog').html();
+
+var $status = $jq('.number');
+var $slider = $jq('.slider');
+ $slider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        $status.text(i + 'of' + slick.slideCount/2);
+    });
 if (!slide) {
   $jq(document).ready(function () {
     $jq('.slider').slick({
@@ -56,6 +64,8 @@ var modalLogin = document.querySelector('.modal--login');
 var logIn = document.querySelector('.login');
 var email = document.querySelector('#modal__email');
 var freezeScroll = document.querySelector('html');
+var logInTablet = document.querySelector('.login--tablet');
+
 
 var openLogin = function () {
   modalLogin.classList.remove('modal--hidden');
@@ -76,6 +86,16 @@ logIn.addEventListener('click', function (evt) {
   evt.preventDefault();
   openLogin();
 });
+
+if (logInTablet) {
+  logInTablet.classList.remove('login--nojs');
+
+  logInTablet.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    openLogin();
+  });
+}
+
 
 var loginClose = document.querySelector('.modal__close--login');
 
@@ -98,10 +118,10 @@ for (var i = 0; i < acc.length; i++) {
 
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
-      panel.style.opacity = null;
+      panel.style.display = 'none';
     } else {
-      panel.style.maxHeight = panel.style.maxHeight + '290px';
-      panel.style.opacity = panel.style.opacity + '1';
+      panel.style.maxHeight = panel.style.maxHeight + '500px';
+      panel.style.display = 'block';
     }
   });
 }
@@ -124,6 +144,10 @@ headerToggle.addEventListener('click', function () {
 });
 
 var filter = document.querySelector('.filter');
+if (filter) {
+  filter.classList.remove('filter--nojs');
+}
+
 var filterToggle = document.querySelector('.filter-toggle');
 
 if (filterToggle) {
@@ -131,11 +155,13 @@ if (filterToggle) {
     if (filter.classList.contains('filter--closed')) {
       filter.classList.remove('filter--closed');
       filter.classList.add('filter--opened');
+      freezeScroll.style.overflow = 'hidden';
       document.addEventListener('keydown', onPopupEscPress);
 
     } else {
       filter.classList.add('filter--closed');
       filter.classList.remove('filter--opened');
+      freezeScroll.style.overflow = 'visible';
       document.removeEventListener('keydown', onPopupEscPress);
     }
   });
@@ -148,7 +174,7 @@ if (filterClose) {
     if (filter.classList.contains('filter--opened')) {
       filter.classList.remove('filter--opened');
       filter.classList.add('filter--closed');
-
+      freezeScroll.style.overflow = 'visible';
     } else {
       filter.classList.add('filter--opened');
       filter.classList.remove('filter--closed');
@@ -165,10 +191,10 @@ for (var j = 0; j < filterBtn.length; j++) {
 
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
-      panel.style.opacity = null;
+      panel.style.display = 'none';
     } else {
       panel.style.maxHeight = panel.style.maxHeight + '290px';
-      panel.style.opacity = panel.style.opacity + '1';
+      panel.style.display = 'block';
     }
   });
 }
@@ -221,6 +247,7 @@ if (cardClose) {
     }
   });
 }
+
 
 
 document.addEventListener('click', function (evt) {

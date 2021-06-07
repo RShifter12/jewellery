@@ -47,7 +47,7 @@
     top: 4rem;
     height: 5rem;
     width: 50px;
-    background-color: $white;
+    background-color: transparent;
     cursor: pointer;
     border: none;
     display: block;
@@ -65,9 +65,13 @@
     }
 
     &:active {
-      background-color: lighten($primary, 15%);
+      background-color: darken($primary, 25%);
     }
   }
+}
+
+.header--nojs .header__toggle {
+  display: none;
 }
 
 .header__toggle::before {
@@ -87,7 +91,7 @@
     position: absolute;
     width: 25px;
     height: 1px;
-    background-color: $white;
+    background-color: white;
     top: 15px;
     left: 1.5rem;
     box-shadow: 0 8px 0 0 white, 0 16px 0 0 white;
@@ -108,6 +112,7 @@
     height: 4rem;
     padding-left: 5rem;
     margin-left: 4rem;
+    color: white;
   }
 
   @media (max-width: $mobile-width) {
@@ -226,6 +231,13 @@
   }
 }
 
+.header--nojs svg {
+  @media (max-width: $tablet-width) {
+    stroke: $white;
+    fill: none;
+  }
+}
+
 .nav {
   max-width: 50rem;
   margin: 0 auto;
@@ -256,11 +268,13 @@
 
   &:hover,
   &:focus {
-    color: $primary;
+    opacity: 0.5;
+    color: black;
   }
 
   &:active {
-    color: darken($primary, 25%);
+    opacity: 1;
+    color: black;
   }
 }
 
@@ -270,10 +284,12 @@
   @media (max-width: $tablet-width) {
     background-color: $primary;
     padding-bottom: 8rem;
-    min-height: 100%;
+    height: 100%;
     position: absolute;
     z-index: 10;
     width: 100%;
+    overflow-y: scroll;
+
   }
 }
 
@@ -367,10 +383,31 @@
   display: none;
 }
 
+.header--nojs .nav-tablet {
+  font-size: 18px;
+  line-height: 23px;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-left: 4.5rem;
+  margin-top: 4rem;
+  grid-row-gap: 2rem;
+}
+
 .nav-tablet a {
   color: $white;
 }
 
 .nav-tablet--info a {
   color: rgba(255, 255, 255, 0.75);
+
+  &:hover,
+  &:focus {
+    color: white;
+    opacity: 0.5;
+  }
+
+  &:active {
+    color: white;
+    opacity: 1;
+  }
 }

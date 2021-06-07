@@ -10,12 +10,14 @@
     min-height: 470px;
     padding-left: 4.5rem;
     padding-right: 4.5rem;
+    max-width: 770px;
   }
 
   @media (max-width: $mobile-width) {
     min-height: 565px;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    max-width: 510px;
   }
 }
 

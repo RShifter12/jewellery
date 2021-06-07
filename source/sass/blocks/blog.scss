@@ -100,14 +100,14 @@
   @media (max-width: $tablet-width) {
     min-width: 339px;
     width: 100%;
-    min-height: 300px;
+    max-height: 300px;
   }
 
   @media (max-width: $mobile-width) {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    min-height: 256px;
+    height: auto;
+//    object-fit: cover;
+    max-height: 250px;
     min-width: 290px;
   }
 }
@@ -119,13 +119,11 @@
   @media (max-width: $tablet-width) {
     width: 339px;
     height: 300px;
-    object-fit: cover;
   }
 
   @media (max-width: $mobile-width) {
     width: 100%;
     height: 256px;
-    object-fit: cover;
     min-height: 256px;
   }
 }

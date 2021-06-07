@@ -60,15 +60,18 @@ a {
 /* cormorant-garamond-regular - latin_cyrillic */
 @font-face {
   font-family: "Cormorant Garamond";
+  font-display: swap;
   font-style: normal;
   font-weight: 400;
   src: local(""),
     url("../fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff2") format("woff2"),
     url("../fonts/cormorant-garamond-v10-latin_cyrillic-regular.woff") format("woff");
+
 }
 /* cormorant-garamond-500 - latin_cyrillic */
 @font-face {
   font-family: "Cormorant Garamond";
+  font-display: swap;
   font-style: normal;
   font-weight: 500;
   src: local(""),
@@ -78,6 +81,7 @@ a {
 /* cormorant-garamond-700 - latin_cyrillic */
 @font-face {
   font-family: "Cormorant Garamond";
+  font-display: swap;
   font-style: normal;
   font-weight: 700;
   src: local(""),
@@ -85,18 +89,10 @@ a {
     url("../fonts/cormorant-garamond-v10-latin_cyrillic-700.woff") format("woff");
 }
 
-/* poppins-300 - latin */
-@font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 300;
-  src: local(""),
-    url("../fonts/poppins-v15-latin-300.woff2") format("woff2"),
-    url("../fonts/poppins-v15-latin-300.woff") format("woff");
-}
 /* poppins-regular - latin */
 @font-face {
   font-family: "Poppins";
+  font-display: swap;
   font-style: normal;
   font-weight: 400;
   src: local(""),
@@ -106,6 +102,7 @@ a {
 /* poppins-500 - latin */
 @font-face {
   font-family: "Poppins";
+  font-display: swap;
   font-style: normal;
   font-weight: 500;
   src: local(""),
@@ -115,6 +112,7 @@ a {
 /* poppins-700 - latin */
 @font-face {
   font-family: "Poppins";
+  font-display: swap;
   font-style: normal;
   font-weight: 700;
   src: local(""),

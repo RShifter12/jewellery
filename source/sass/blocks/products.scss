@@ -16,6 +16,8 @@
   @media (max-width: $mobile-width) {
     margin-top: 6.5rem;
     min-height: 420px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -56,7 +58,7 @@
   position: relative;
 
   @media (max-width: $tablet-width) {
-    max-width: 700px;
+    max-width: 680px;
     margin: 0 auto;
   }
 }
@@ -82,8 +84,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    object-fit: cover;
-    max-width: 136px;
+//    max-width: 136px;
     max-height: 130px;
     min-height: inherit;
   }
@@ -177,14 +178,15 @@
   border: none;
   background-color: transparent;
   opacity: 0.5;
+  font-size: 16px;
 
   @media (max-width: $tablet-width) {
     font-family: "Poppins", "Arial", sans-serif;
     color: black;
     opacity: 0.5;
-    font-size: 16px;
     width: 16px;
     margin-right: 0.6rem;
+
   }
 }
 
@@ -194,13 +196,22 @@
   overflow: hidden;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  column-gap: 3rem;
   margin: 0 auto;
 
   @media (max-width: $tablet-width) {
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+.products .slick-slide:nth-child(2n) {
+  margin-left: 3rem;
+  margin-right: 3rem;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0rem;
+  }
+
 }
 
 .slick-list {
@@ -219,7 +230,7 @@
   max-width: 1190px;
   padding-right: 1rem;
   padding-left: 1rem;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
 
   @media (max-width: $tablet-width) {
     display: block;
@@ -228,7 +239,9 @@
 
   @media (max-width: $mobile-width) {
     margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 4.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 }
 
@@ -258,7 +271,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, min-content);
-  grid-row-gap: 0;
+  grid-row-gap: 1rem;
   grid-column-gap: 3rem;
 
   @media (max-width: $tablet-width) {
@@ -270,6 +283,9 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 0;
+    grid-column-gap: 0;
+    justify-content: space-between;
+    grid-row-gap: 0;
   }
 }
 
@@ -301,12 +317,12 @@
 }
 
 .slider--catalog p {
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.8rem;
 }
 
 .filter {
-  margin-left: -2.5rem;
-  margin-right: 3rem;
+  margin-left: 0;
+  margin-right: 5rem;
 
   @media (max-width: $tablet-width) {
     position: absolute;
@@ -337,7 +353,10 @@
   }
 }
 
+
+
 .filter form {
+  max-width: 250px;
   @media (max-width: $tablet-width) {
     position: relative;
     max-width: 465px;
@@ -350,11 +369,31 @@
   }
 }
 
+.filter--nojs {
+  display: block;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.filter--nojs form {
+  margin: 0 auto;
+}
+
+.filter--nojs .filter__close {
+  display: none;
+}
+
+.filter--nojs .filter-item__content {
+  max-height: 290px;
+  display: block;
+}
+
 .filter__content {
   border: 1px solid $primary;
   width: 250px;
-  margin: 0 auto;
+//  margin: 0 auto;
   text-align: left;
+  margin-right: 0;
 
   @media (max-width: $tablet-width) {
     border: none;
@@ -378,25 +417,26 @@
   max-height: 0;
   max-width: 52rem;
   text-align: left;
-  opacity: 0;
   margin-bottom: 0;
   margin-top: -17px;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
+  display: none;
 
   @media (max-width: $tablet-width) {
     margin: 0;
   }
 }
 
+
 .filter-item__trigger {
   font-family: "Poppins", "Arial", sans-serif;
   display: block;
   color: $text-black;
   cursor: pointer;
-  padding-top: 3rem;
-  padding-left: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 0;
+  padding-left: 3.5rem;
+  padding-bottom: 0;
   width: 100%;
   border: none;
   text-align: left;
@@ -405,7 +445,7 @@
   transition: 0.4s;
   background-color: transparent;
   position: relative;
-  height: 67px;
+  height: 70px;
 
   @media (max-width: $tablet-width) {
     padding-left: 0;
@@ -415,6 +455,11 @@
 
   @media (max-width: $mobile-width) {
     height: 72px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary;
   }
 }
 
@@ -576,7 +621,7 @@
   width: 250px;
   height: 68px;
   background-color: $primary;
-  margin-top: 4.5rem;
+  margin-top: 3.5rem;
   margin-bottom: 2.5rem;
   color: white;
   font-size: 16px;
@@ -629,15 +674,26 @@
   display: flex;
   list-style: none;
   margin-top: 0;
+  column-gap: 1.5rem;
+//  margin-right: 1.5rem;
+  padding-left: 0;
 
   @media (max-width: $tablet-width) {
     justify-content: center;
     padding-left: 0;
+    margin-top: 0;
   }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 1.5rem;
+    column-gap: 2.5rem;
+//    margin-right: 1.5rem;
+  }
+
 }
 
 .slider--catalog li {
-  margin-right: 1.5rem;
+  margin-right: 0;
   color: #9b9997;
 }
 
@@ -656,7 +712,7 @@
   margin-top: 4rem;
 
   @media (max-width: $tablet-width) {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 
   @media (max-width: $mobile-width) {
@@ -677,7 +733,7 @@
 }
 
 .range-filter {
-  margin-left: 1rem;
+  margin-left: 3rem;
   margin-top: -1rem;
   margin-bottom: 5rem;
 
@@ -779,7 +835,7 @@
 
 .products--card {
   margin-top: 11rem;
-  margin-bottom: 14rem;
+  margin-bottom: 12.5rem;
   max-width: 1200px;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -818,33 +874,38 @@
 
 .slider__wrapper--card img {
   @media (max-width: $tablet-width) {
+    height: auto;
     min-height: 340px;
     max-width: 324px;
   }
 
   @media (max-width: $mobile-width) {
     margin: 0 auto;
-    object-fit: fill;
     min-height: 136px;
   }
 }
 
 .slider--card {
   @media (max-width: $tablet-width) {
-    max-width: 710px;
+    max-width: 680px;
   }
 }
 
 .slider--card .slick-dots {
-  margin-top: 1.7rem;
+  margin-top: 3rem;
   height: 12px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 2rem;
+  }
+
 }
 
 .slider--card .slick-arrow.slick-prev {
   left: 0.5rem;
 
   @media (max-width: $tablet-width) {
-    left: 1.5rem;
+    left: 0;
   }
 }
 
@@ -852,7 +913,7 @@
   right: 0.5rem;
 
   @media (max-width: $tablet-width) {
-    right: 1.5rem;
+    right: 0;
   }
 }
 
@@ -865,4 +926,9 @@
     font-size: 16px;
     line-height: 130%;
   }
+}
+
+.slick-active button {
+  color: black;
+  opacity: 1;
 }
