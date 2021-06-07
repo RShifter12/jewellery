@@ -21,6 +21,7 @@
     padding-right: 1.5rem;
     display: block;
     margin-top: 0;
+    position: relative;
   }
 }
 
@@ -136,7 +137,6 @@
   @media (max-width: $mobile-width) {
     margin-bottom: 1rem;
   }
-
 }
 
 .card__tab p:first-child {
@@ -262,19 +262,14 @@
 
   @media (max-width: $mobile-width) {
     display: block;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 130%;
     text-align: center;
-    margin-top: -1rem;
     z-index: 10000;
     position: absolute;
-    bottom: -3%;
-    left: 15.8%;
+    bottom: 65%;
+    left: 45%;
+    color: black;
+    font-family: "Poppins", "Arial", sans-serif;
   }
-}
-
-.card__number p {
-  font-family: "Poppins", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 130%;
 }

@@ -4,11 +4,12 @@ var slide = $jq('.slider--catalog').html();
 
 var $status = $jq('.number');
 var $slider = $jq('.slider');
- $slider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-        var i = (currentSlide ? currentSlide : 0) + 1;
-        $status.text(i + 'of' + slick.slideCount/2);
-    });
+
+$slider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+  var i = (currentSlide ? currentSlide / 2 : 0) + 1;
+  $status.text(i + ' of ' + slick.slideCount/2);
+});
+
 if (!slide) {
   $jq(document).ready(function () {
     $jq('.slider').slick({
@@ -40,6 +41,13 @@ if (!slide) {
     });
   });
 }
+
+var $statusCard = $jq('.card__number');
+var $sliderCard = $jq('.card__images');
+$sliderCard.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+  var i = (currentSlide ? currentSlide : 0) + 1;
+  $statusCard.text(i + ' of ' + slick.slideCount);
+});
 
 if ($jq('.card__images').length) {
   $jq(window).on('load resize', function () {

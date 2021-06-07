@@ -103,6 +103,8 @@
   outline: none;
   border: none;
   margin-left: 1rem;
+  line-height: normal;
+  padding-top: 0;
 
   @media (max-width: $tablet-width) {
     background: rgba(255, 255, 255, 0.15);
@@ -123,7 +125,8 @@
     color: #9b9997;
     font-family: "Poppins", "Arial", sans-serif;
     font-size: 14px;
-    line-height: 21px;
+    line-height: normal;
+
 
     @media (max-width: $tablet-width) {
       opacity: 0;
@@ -289,7 +292,6 @@
     z-index: 10;
     width: 100%;
     overflow-y: scroll;
-
   }
 }
 
@@ -327,6 +329,14 @@
 }
 
 .header--nojs .nav-tablet {
+  font-size: 18px;
+  line-height: 23px;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-left: 4.5rem;
+  margin-top: 4rem;
+  grid-row-gap: 2rem;
+
   @media (max-width: $tablet-width) {
     font-size: 18px;
     line-height: 23px;
@@ -381,16 +391,6 @@
 
 .header--closed .nav-tablet {
   display: none;
-}
-
-.header--nojs .nav-tablet {
-  font-size: 18px;
-  line-height: 23px;
-  display: grid;
-  grid-template-columns: 1fr;
-  padding-left: 4.5rem;
-  margin-top: 4rem;
-  grid-row-gap: 2rem;
 }
 
 .nav-tablet a {

@@ -1,5 +1,5 @@
 .products {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
   text-align: center;
   margin-top: 12rem;
@@ -84,7 +84,6 @@
   }
 
   @media (max-width: $mobile-width) {
-//    max-width: 136px;
     max-height: 130px;
     min-height: inherit;
   }
@@ -168,11 +167,6 @@
   list-style: none;
 }
 
-.slick-active button {
-  color: black;
-  opacity: 1;
-}
-
 .slick-dots button {
   outline: none;
   border: none;
@@ -186,7 +180,6 @@
     opacity: 0.5;
     width: 16px;
     margin-right: 0.6rem;
-
   }
 }
 
@@ -209,9 +202,8 @@
   margin-right: 3rem;
 
   @media (max-width: $tablet-width) {
-    margin-right: 0rem;
+    margin-right: 0;
   }
-
 }
 
 .slick-list {
@@ -353,10 +345,9 @@
   }
 }
 
-
-
 .filter form {
   max-width: 250px;
+
   @media (max-width: $tablet-width) {
     position: relative;
     max-width: 465px;
@@ -391,7 +382,6 @@
 .filter__content {
   border: 1px solid $primary;
   width: 250px;
-//  margin: 0 auto;
   text-align: left;
   margin-right: 0;
 
@@ -675,7 +665,6 @@
   list-style: none;
   margin-top: 0;
   column-gap: 1.5rem;
-//  margin-right: 1.5rem;
   padding-left: 0;
 
   @media (max-width: $tablet-width) {
@@ -687,9 +676,7 @@
   @media (max-width: $mobile-width) {
     margin-top: 1.5rem;
     column-gap: 2.5rem;
-//    margin-right: 1.5rem;
   }
-
 }
 
 .slider--catalog li {
@@ -898,7 +885,6 @@
   @media (max-width: $tablet-width) {
     margin-top: 2rem;
   }
-
 }
 
 .slider--card .slick-arrow.slick-prev {

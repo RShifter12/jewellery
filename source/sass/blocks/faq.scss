@@ -1,6 +1,5 @@
 .faq {
   max-width: 990px;
-//  min-height: 715px;
   margin: 0 auto;
   text-align: center;
   padding-left: 1rem;
@@ -10,13 +9,11 @@
 
   @media (max-width: $tablet-width) {
     max-width: 700px;
-//    min-height: 680px;
     margin-bottom: 7rem;
   }
 
   @media (max-width: $mobile-width) {
     min-width: 310px;
-//    min-height: 620px;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     margin-bottom: 6rem;
@@ -147,8 +144,8 @@
 
   @media (max-width: $mobile-width) {
     position: absolute;
-    right: 18px;
-    top: 3rem;
+    right: 22px;
+    top: 2.5rem;
     width: 20px;
     height: 10px;
     margin-right: 0;
@@ -178,8 +175,8 @@
 
   @media (max-width: $mobile-width) {
     position: absolute;
-    right: 18px;
-    top: 2rem;
+    right: 22px;
+    top: 2.5rem;
     width: 20px;
     height: 10px;
     margin-right: 0;
