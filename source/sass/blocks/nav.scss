@@ -29,7 +29,7 @@
 }
 
 .header__left {
-  margin-top: 4.5rem;
+//  margin-top: 4.5rem;
   position: relative;
 
   @media (max-width: $tablet-width) {
@@ -103,8 +103,9 @@
   outline: none;
   border: none;
   margin-left: 1rem;
-  line-height: normal;
-  padding-top: 0;
+  line-height: 15px;
+  padding-top: 4.5rem;
+
 
   @media (max-width: $tablet-width) {
     background: rgba(255, 255, 255, 0.15);
@@ -115,6 +116,7 @@
     padding-left: 5rem;
     margin-left: 4rem;
     color: white;
+    padding-top: 0;
   }
 
   @media (max-width: $mobile-width) {
@@ -125,8 +127,6 @@
     color: #9b9997;
     font-family: "Poppins", "Arial", sans-serif;
     font-size: 14px;
-    line-height: normal;
-
 
     @media (max-width: $tablet-width) {
       opacity: 0;
@@ -176,6 +176,15 @@
 
   @media (max-width: $mobile-width) {
     margin-top: 2rem;
+  }
+}
+
+.header__center--index svg {
+  cursor: auto;
+
+  &:hover,
+  &:focus {
+    fill: black;
   }
 }
 

@@ -1,11 +1,23 @@
 .intro {
   background-color: $primary;
-  background-image: url(".././img/intro.jpg");
+  background-image: url(".././img/introcopy.jpg");
   background-repeat: no-repeat;
   height: 463px;
   width: 100%;
   background-size: 100% 100%;
   display: grid;
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.intro--index::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  display: block;
+  height: 463px;
+  width: 100%;
+  background-color: rgba(86, 64, 52, 0.7);
 }
 
 .intro h1 {
@@ -19,6 +31,7 @@
   letter-spacing: 0.03em;
   align-self: flex-end;
   vertical-align: middle;
+  z-index: 5;
 
   @media (max-width: $mobile-width) {
     font-size: 38px;
@@ -36,6 +49,7 @@
   line-height: 49px;
   font-style: italic;
   align-self: flex-start;
+  z-index: 5;
 
   @media (max-width: $mobile-width) {
     font-size: 34px;
